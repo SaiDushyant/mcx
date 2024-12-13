@@ -74,6 +74,25 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* What we Offer */}
+
+      <section
+        className="w-full md:min-h-[800px] flex justify-center"
+        style={{ backgroundColor: "#F7F9F2" }}
+      >
+        <div className="text-center border-2 w-fit h-fit">
+          <h1 className="text-4xl md:text-7xl font-semibold py-14">
+            What <span style={{ color: "#FFA500" }}>WE</span> Offer{" "}
+            <span style={{ color: "#FFA500" }}>!!</span>
+          </h1>
+          <p className="text-xl tracking-wide">
+            We provide essential services that empower farmers and create
+            opportunities for global investors.
+            <br /> Here's how we make a difference.
+          </p>
+        </div>
+      </section>
     </>
   );
 };
