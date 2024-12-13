@@ -13,67 +13,65 @@ function NavBar() {
 
   return (
     <nav className="bg-green-700 text-white shadow-lg">
-      <div className="container">
-        <div className="flex items-center justify-between h-[5.5rem]">
-          <NavLink to="/" className="flex items-center">
-            <img src={Logo} alt="logo" className="w-44 md:ml-16 mt-2" />
+      <div className="flex items-center justify-between h-[5.5rem]">
+        <NavLink to="/" className="flex items-center">
+          <img src={Logo} alt="logo" className="w-44 md:ml-16 mt-2" />
+        </NavLink>
+
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-6 mr-24">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `hover:text-green-200 text-xl ${
+                isActive ? "text-green-200 font-semibold" : ""
+              }`
+            }
+          >
+            Home
           </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `hover:text-green-200 text-xl ${
+                isActive ? "text-green-200 font-semibold" : ""
+              }`
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `hover:text-green-200 text-xl ${
+                isActive ? "text-green-200 font-semibold" : ""
+              }`
+            }
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) =>
+              `hover:text-green-200 text-xl ${
+                isActive ? "text-green-200 font-semibold" : ""
+              }`
+            }
+          >
+            Gallery
+          </NavLink>
+        </div>
 
-          {/* Desktop menu */}
-          <div className="hidden md:flex space-x-6">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `hover:text-green-200 text-xl ${
-                  isActive ? "text-green-200 font-semibold" : ""
-                }`
-              }
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `hover:text-green-200 text-xl ${
-                  isActive ? "text-green-200 font-semibold" : ""
-                }`
-              }
-            >
-              About
-            </NavLink>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `hover:text-green-200 text-xl ${
-                  isActive ? "text-green-200 font-semibold" : ""
-                }`
-              }
-            >
-              Services
-            </NavLink>
-            <NavLink
-              to="/gallery"
-              className={({ isActive }) =>
-                `hover:text-green-200 text-xl ${
-                  isActive ? "text-green-200 font-semibold" : ""
-                }`
-              }
-            >
-              Gallery
-            </NavLink>
-          </div>
-
-          {/* Mobile menu */}
-          <div className="md:hidden flex items-center mr-10">
-            {/* Hamburger icon */}
-            <button onClick={toggleMenu} className="text-white">
-              {isMenuOpen ? (
-                <span className="text-5xl">×</span> // Cross icon
-              ) : (
-                <span className="text-3xl">☰</span> // Hamburger icon
-              )}
-            </button>
-          </div>
+        {/* Mobile menu */}
+        <div className="md:hidden flex items-center mr-10">
+          {/* Hamburger icon */}
+          <button onClick={toggleMenu} className="text-white">
+            {isMenuOpen ? (
+              <span className="text-5xl">×</span> // Cross icon
+            ) : (
+              <span className="text-3xl">☰</span> // Hamburger icon
+            )}
+          </button>
         </div>
       </div>
 
