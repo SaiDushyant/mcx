@@ -9,9 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HashRouter>
-      {" "}
-      {/* Wrap your App with HashRouter */}
-      <App />
+      <App /> {/* Wrap your App with HashRouter */}
     </HashRouter>
   </React.StrictMode>
 );
