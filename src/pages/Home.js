@@ -330,39 +330,55 @@ const Home = () => {
               <h1>Select Services</h1>
 
               <div className="mt-4 flex gap-4 items-center justify-center">
-                <label className="flex items-center space-x-3">
+                {/* Funding Checkbox */}
+                <label className="flex items-center space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
                     id="funding"
+                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
                   />
+                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
+                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
+                  </span>
                   <span>Funding</span>
                 </label>
 
-                <label className="flex items-center space-x-3">
+                {/* Material Checkbox */}
+                <label className="flex items-center space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
                     id="material"
+                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
                   />
+                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
+                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
+                  </span>
                   <span>Material</span>
                 </label>
 
-                <label className="flex items-center space-x-3">
+                {/* Medical Support Checkbox */}
+                <label className="flex items-center space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
                     id="medical"
+                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
                   />
+                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
+                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
+                  </span>
                   <span>Medical Support</span>
                 </label>
 
-                <label className="flex items-center space-x-3">
+                {/* General Inquiry Checkbox */}
+                <label className="flex items-center space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
                     id="inquiry"
+                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
                   />
+                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
+                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
+                  </span>
                   <span>General Inquiry</span>
                 </label>
               </div>
