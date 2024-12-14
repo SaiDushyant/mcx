@@ -1,7 +1,7 @@
 // src/Home.js
 
 import { ArrowRight } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import {
   FaDiscord,
@@ -14,6 +14,20 @@ import { BusinessMan, Health, Sack } from "../assets/images/images";
 import NavBar from "../components/NavBar";
 
 const Home = () => {
+  const [values, setValues] = useState({
+    name: "",
+    place: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleInputChange = (event) => {
+    const { id, value } = event.target;
+    setValues((prevValues) => ({
+      ...prevValues,
+      [id]: value.trim(),
+    }));
+  };
   return (
     <>
       <NavBar />
@@ -223,7 +237,136 @@ const Home = () => {
           {/* RIGHT side */}
 
           <div className="w-full">
-            <div className="border-2"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 mt-6">
+              {/* Name Field */}
+              <div className="relative">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="" // Use an empty string here
+                  className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
+                  onChange={handleInputChange}
+                  value={values.name}
+                />
+                <label
+                  htmlFor="name"
+                  className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
+                    values.name
+                      ? " -translate-y-6 text-black font-semibold"
+                      : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
+                  } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
+                >
+                  Name
+                </label>
+              </div>
+
+              {/* Place Field */}
+              <div className="relative">
+                <input
+                  type="text"
+                  id="place"
+                  placeholder=" "
+                  className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
+                  onChange={handleInputChange}
+                  value={values.place}
+                />
+                <label
+                  htmlFor="place"
+                  className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
+                    values.place
+                      ? "-translate-y-6 text-black font-semibold"
+                      : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
+                  } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
+                >
+                  Place
+                </label>
+              </div>
+
+              {/* Email Field */}
+              <div className="relative">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder=" "
+                  className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
+                  onChange={handleInputChange}
+                  value={values.email}
+                />
+                <label
+                  htmlFor="email"
+                  className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
+                    values.email
+                      ? "-translate-y-6 text-black font-semibold"
+                      : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
+                  } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
+                >
+                  Email
+                </label>
+              </div>
+
+              {/* Phone Number Field */}
+              <div className="relative">
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder=" "
+                  className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
+                  onChange={handleInputChange}
+                  value={values.phone}
+                />
+                <label
+                  htmlFor="phone"
+                  className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
+                    values.phone
+                      ? "-translate-y-6 text-black font-semibold"
+                      : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
+                  } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
+                >
+                  Phone Number
+                </label>
+              </div>
+            </div>
+            <div className="p-6">
+              <h1>Select Services</h1>
+
+              <div className="mt-4 flex gap-4 items-center justify-center">
+                <label className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
+                    id="funding"
+                  />
+                  <span>Funding</span>
+                </label>
+
+                <label className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
+                    id="material"
+                  />
+                  <span>Material</span>
+                </label>
+
+                <label className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
+                    id="medical"
+                  />
+                  <span>Medical Support</span>
+                </label>
+
+                <label className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    className="w-5 h-5 border-2 border-gray-400 rounded-full"
+                    id="inquiry"
+                  />
+                  <span>General Inquiry</span>
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </section>
