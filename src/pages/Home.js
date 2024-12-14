@@ -1,6 +1,15 @@
 // src/Home.js
+
 import { ArrowRight } from "lucide-react";
 import React from "react";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import {
+  FaDiscord,
+  FaInstagram,
+  FaLocationDot,
+  FaTwitter,
+} from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 import { BusinessMan, Health, Sack } from "../assets/images/images";
 import NavBar from "../components/NavBar";
 
@@ -146,12 +155,76 @@ const Home = () => {
 
       <section className="w-full min-h-screen flex flex-col items-center">
         <div className="text-center mt-16">
-          <h1 className="text-7xl font-bold">
+          <h1 className="text-5xl md:text-7xl font-bold">
             Contact <span style={{ color: "#FFA500" }}>US</span>
           </h1>
-          <p className="mt-6 text-xl" style={{ color: "#717171" }}>
+          <p className="mt-6 text-lg md:text-xl" style={{ color: "#717171" }}>
             Any question or remarks? Just write us a message!
           </p>
+        </div>
+        <div className="border-2 mt-10 md:mt-16 w-10/12 md:w-3/5 flex">
+          {/* LEFT side  */}
+
+          <div
+            className="p-5 md:p-10 md:pr-28 md:max-w-[43%] hidden md:block"
+            style={{ backgroundColor: "#87986A" }}
+          >
+            <div className="">
+              <h3 className="text-3xl text-white">Contact Information</h3>
+              <h6 className="text-xl" style={{ color: "#C9C9C9" }}>
+                Something to say? Contact us !
+              </h6>
+            </div>
+            <div className="mt-24">
+              <div className="flex gap-4 items-center my-4">
+                <BiSolidPhoneCall
+                  fill="white"
+                  strokeWidth={0}
+                  className="stroke-white"
+                  size={20}
+                />
+                <p className="text-white text-lg">+91 9080103716</p>
+              </div>
+              <div className="flex gap-4 items-center my-6">
+                <IoMdMail
+                  fill="white"
+                  strokeWidth={0}
+                  className="stroke-white"
+                  size={18}
+                />
+                <p className="text-white text-lg">mcxfoundation@gmail.com</p>
+              </div>
+              <div className="flex gap-4 items-start my-4">
+                <FaLocationDot
+                  fill="white"
+                  strokeWidth={0}
+                  className="stroke-white mt-1"
+                  size={18}
+                />
+                <p className="text-white text-lg flex-1 whitespace-pre-line">
+                  No.3/20, A K Thanda Village, Velanur, Harur, Dharmapuri, Tamil
+                  Nadu - 636906
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-6 mt-24">
+              <div className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                <FaTwitter size={17} fill="white" />
+              </div>
+              <div className="w-8 h-8 rounded-full bg-white flex justify-center items-center">
+                <FaInstagram size={20} />
+              </div>
+              <div className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                <FaDiscord size={20} fill="white" />
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT side */}
+
+          <div className="w-full">
+            <div className="border-2"></div>
+          </div>
         </div>
       </section>
     </>
