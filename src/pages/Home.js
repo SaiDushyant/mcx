@@ -176,7 +176,7 @@ const Home = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="border-2 mt-10 md:mt-16 w-10/12 md:w-3/5 flex">
+        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 md:w-3/5 flex mb-10 overflow-hidden">
           {/* LEFT side  */}
 
           <div
@@ -236,8 +236,8 @@ const Home = () => {
 
           {/* RIGHT side */}
 
-          <div className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 mt-6">
+          <div className="w-full p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3 md:mt-6">
               {/* Name Field */}
               <div className="relative">
                 <input
@@ -326,61 +326,84 @@ const Home = () => {
                 </label>
               </div>
             </div>
-            <div className="p-6">
-              <h1>Select Services</h1>
-
-              <div className="mt-4 flex gap-4 items-center justify-center">
-                {/* Funding Checkbox */}
-                <label className="flex items-center space-x-3 cursor-pointer">
+            <div className="mt-8">
+              <h1 className="text-xl font-semibold">Select Services</h1>
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mt-5">
+                <div className="flex items-center justify-center">
                   <input
-                    type="checkbox"
                     id="funding"
-                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
+                    className="peer"
+                    type="radio"
+                    name="status"
                   />
-                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
-                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
-                  </span>
-                  <span>Funding</span>
-                </label>
+                  <label
+                    htmlFor="funding"
+                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                  >
+                    Funding
+                  </label>
+                </div>
 
-                {/* Material Checkbox */}
-                <label className="flex items-center space-x-3 cursor-pointer">
+                <div className="flex items-center justify-center">
                   <input
-                    type="checkbox"
+                    id="medical-support"
+                    className="peer"
+                    type="radio"
+                    name="status"
+                  />
+                  <label
+                    htmlFor="medical-support"
+                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                  >
+                    Medical Support
+                  </label>
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <input
                     id="material"
-                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
+                    className="peer"
+                    type="radio"
+                    name="status"
                   />
-                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
-                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
-                  </span>
-                  <span>Material</span>
-                </label>
+                  <label
+                    htmlFor="material"
+                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                  >
+                    Material
+                  </label>
+                </div>
 
-                {/* Medical Support Checkbox */}
-                <label className="flex items-center space-x-3 cursor-pointer">
+                <div className="flex items-center justify-center">
                   <input
-                    type="checkbox"
-                    id="medical"
-                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
+                    id="general-inquiry"
+                    className="peer"
+                    type="radio"
+                    name="status"
                   />
-                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
-                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
-                  </span>
-                  <span>Medical Support</span>
-                </label>
-
-                {/* General Inquiry Checkbox */}
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    id="inquiry"
-                    className="hidden peer" // Hide the default checkbox, but allow it to be controlled
-                  />
-                  <span className="w-4 h-4 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-orange-500">
-                    <span className="w-3 h-3 bg-white rounded-full peer-checked:bg-orange-500"></span>
-                  </span>
-                  <span>General Inquiry</span>
-                </label>
+                  <label
+                    htmlFor="general-inquiry"
+                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                  >
+                    General Inquiry
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4">
+              <h1 className="text-xl font-semibold">Message</h1>
+              <input
+                type="text"
+                placeholder="Write your message..."
+                className="w-full border-b-2 border-gray-300 focus:border-orange-500 focus:outline-none mt-2"
+              />
+              <div className="w-full mt-6">
+                <button
+                  className="w-fit px-8 py-3 text-center rounded-lg text-white font-semibold float-right"
+                  style={{ backgroundColor: "#87986A" }}
+                >
+                  Send Message
+                </button>
               </div>
             </div>
           </div>
