@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { BusinessMan, Health, Sack } from "../assets/images/images";
+import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 const Home = () => {
@@ -176,7 +177,7 @@ const Home = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 md:w-3/5 flex mb-10 overflow-hidden">
+        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 lg:w-3/5 flex mb-10 overflow-hidden">
           {/* LEFT side  */}
 
           <div
@@ -409,6 +410,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+
+      <Footer />
     </>
   );
 };
