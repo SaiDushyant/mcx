@@ -177,11 +177,11 @@ const Home = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12  sm:w-9/12 md:w-3/5 flex mb-10 overflow-hidden">
+        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-3/5 flex mb-10 overflow-hidden">
           {/* LEFT side  */}
 
           <div
-            className="p-5 md:p-10 md:pr-28 md:max-w-[43%] hidden md:block"
+            className="p-6 md:py-10 xl:px-10 md:max-w-[40%] hidden md:block"
             style={{ backgroundColor: "#87986A" }}
           >
             <div className="">
