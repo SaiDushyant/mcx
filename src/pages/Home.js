@@ -177,7 +177,7 @@ const Home = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-3/5 flex mb-10 overflow-hidden">
+        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-3/5 max-w-[1000px] flex mb-10 overflow-hidden">
           {/* LEFT side  */}
 
           <div
