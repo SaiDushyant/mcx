@@ -35,7 +35,7 @@ const Home = () => {
 
       {/* Hero Section */}
 
-      <section className="relative h-[600px] flex items-center">
+      <section className="relative h-[600px] xl:h-[770px] flex items-center">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -56,7 +56,7 @@ const Home = () => {
               cultivate a brighter future.
             </p>
             <a
-              href="/services"
+              href="/about"
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
             >
               Learn More
@@ -116,10 +116,10 @@ const Home = () => {
             <br /> Here's how we make a difference.
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-8 items-center justify-evenly mt-16">
+        <div className="w-full flex flex-col md:flex-row xl:px-24 gap-8 items-center justify-evenly mt-16">
           {/* Financial Support */}
           <div
-            className="w-80 h-72 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
+            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Sack} alt="Coin" className="w-28 mb-4" />
@@ -135,7 +135,7 @@ const Home = () => {
 
           {/* Resource Assistance */}
           <div
-            className="w-80 h-72 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
+            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Sack} alt="Coin" className="w-28 mb-4" />
@@ -151,7 +151,7 @@ const Home = () => {
 
           {/* Healthcare for Farmers */}
           <div
-            className="w-80 h-72 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
+            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Health} alt="Coin" className="w-28 " />

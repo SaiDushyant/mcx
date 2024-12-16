@@ -12,7 +12,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="bg-green-700 text-white shadow-lg">
+    <nav className="text-green-900 z-50 sticky top-0 backdrop-blur-md bg-white/15">
       <div className="flex items-center justify-between h-[5.5rem]">
         <NavLink to="/" className="flex items-center">
           <img src={Logo} alt="logo" className="w-44 md:ml-16 mt-2" />
@@ -23,8 +23,8 @@ function NavBar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `hover:text-green-200 text-xl ${
-                isActive ? "text-green-200 font-semibold" : ""
+              `hover:text-green-200 text-2xl ${
+                isActive ? "text-green font-semibold" : ""
               }`
             }
           >
@@ -33,7 +33,7 @@ function NavBar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `hover:text-green-200 text-xl ${
+              `hover:text-green-200 text-2xl ${
                 isActive ? "text-green-200 font-semibold" : ""
               }`
             }
@@ -43,7 +43,7 @@ function NavBar() {
           <NavLink
             to="/services"
             className={({ isActive }) =>
-              `hover:text-green-200 text-xl ${
+              `hover:text-green-200 text-2xl ${
                 isActive ? "text-green-200 font-semibold" : ""
               }`
             }
@@ -53,7 +53,7 @@ function NavBar() {
           <NavLink
             to="/gallery"
             className={({ isActive }) =>
-              `hover:text-green-200 text-xl ${
+              `hover:text-green-200 text-2xl ${
                 isActive ? "text-green-200 font-semibold" : ""
               }`
             }
