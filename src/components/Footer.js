@@ -103,13 +103,13 @@ const Footer = () => {
             <h2 className="text-xl md:text-3xl font-bold">Contact Info</h2>
             <div className="space-y-1 md:space-y-3 mt-1 md:mt-3 text-base md:text-xl pl-1">
               <p className="text-gray-700">
-                <span className="font-semibold">Phone:</span>
+                <span className="font-semibold">Phone: </span>
                 <a href="tel:+919080103716" className="text-blue-500">
                   +91 9080103716
                 </a>
               </p>
               <p className="text-gray-700">
-                <span className="font-semibold">Email:</span>
+                <span className="font-semibold">Email: </span>
                 <a
                   href="mailto:mcxfoundation@gmail.com"
                   className="text-blue-500"
@@ -118,7 +118,7 @@ const Footer = () => {
                 </a>
               </p>
               <p className="text-gray-700">
-                <span className="font-semibold">Address:</span>
+                <span className="font-semibold">Address: </span>
                 No.3/20, A K Thanda Village, Velanur, Harur. Dharmapuri, Tamil
                 Nadu - 636906.
               </p>
