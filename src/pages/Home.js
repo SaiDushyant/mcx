@@ -13,6 +13,7 @@ import { IoMdMail } from "react-icons/io";
 import { BusinessMan, Health, Sack } from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import "./animation.css";
 
 const Home = () => {
   const [values, setValues] = useState({
@@ -119,7 +120,7 @@ const Home = () => {
         <div className="w-full flex flex-col md:flex-row xl:px-24 gap-8 items-center justify-evenly mt-16">
           {/* Financial Support */}
           <div
-            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
+            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Sack} alt="Coin" className="w-28 mb-4" />
@@ -135,7 +136,7 @@ const Home = () => {
 
           {/* Resource Assistance */}
           <div
-            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
+            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Sack} alt="Coin" className="w-28 mb-4" />
@@ -151,7 +152,7 @@ const Home = () => {
 
           {/* Healthcare for Farmers */}
           <div
-            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)]"
+            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Health} alt="Coin" className="w-28 " />

@@ -23,7 +23,7 @@ function NavBar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `hover:text-green-200 text-2xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -33,7 +33,7 @@ function NavBar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `hover:text-green-200 text-2xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -53,7 +53,7 @@ function NavBar() {
           <NavLink
             to="/gallery"
             className={({ isActive }) =>
-              `hover:text-green-200 text-2xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -67,7 +67,7 @@ function NavBar() {
           {/* Hamburger icon */}
           <button onClick={toggleMenu} className="text-white">
             {isMenuOpen ? (
-              <span className="text-5xl">×</span> // Cross icon
+              <span className="text-4xl">×</span> // Cross icon
             ) : (
               <span className="text-3xl">☰</span> // Hamburger icon
             )}
