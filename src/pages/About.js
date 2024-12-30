@@ -74,7 +74,7 @@ const About = () => {
 
         <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-24">
           {/* Founder 1 */}
-          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center hover:scale-105 duration-300">
+          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center hover:scale-105 duration-300 border border-gray-200">
             <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
             <h3 className="text-xl font-semibold text-gray-800">
               NETHAJI SUBASH CHANDRA BOSE S
@@ -83,14 +83,14 @@ const About = () => {
           </div>
 
           {/* Founder 2 */}
-          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center md:scale-105 hover:scale-105 md:hover:scale-110 duration-300">
+          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center md:scale-105 hover:scale-105 md:hover:scale-110 duration-300 border border-gray-200">
             <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
             <h3 className="text-xl font-semibold text-gray-800">SIVA C</h3>
             <p className="text-gray-600">FOUNDER CUM MEMBER TRUSTEE</p>
           </div>
 
           {/* Founder 3 */}
-          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center md:scale-105 hover:scale-105 md:hover:scale-110 duration-300">
+          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center md:scale-105 hover:scale-105 md:hover:scale-110 duration-300 border border-gray-200">
             <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
             <h3 className="text-xl font-semibold text-gray-800">
               VIJAYAPRAKASH M

@@ -14,7 +14,8 @@ const Footer = () => {
         className="w-full h-10 mt-8 sm:mt-16 sm:h-16"
         preserveAspectRatio="none"
         viewBox="0 0 1440 54"
-        style={{ color: "#C8E6C9" }}
+        style={{ color: "#bbf7d0" }}
+        // style={{ color: "#C8E6C9" }}
       >
         <path
           fill="currentColor"
@@ -22,8 +23,8 @@ const Footer = () => {
         />
       </svg>
       <div
-        className="w-full h-auto pt-5 md:p-10 md:px-36"
-        style={{ backgroundColor: "#C8E6C9" }}
+        className="w-full h-auto pt-5 md:p-10 md:px-36 bg-green-200"
+        // style={{ backgroundColor: "#C8E6C9" }}
       >
         <div className="w-9/12 md:w-full mx-auto bg-gray-400 h-[1px]"></div>
 
