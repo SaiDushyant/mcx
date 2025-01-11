@@ -17,7 +17,7 @@ const HorizontalScroll = ({ images }) => {
         loop={true}
         spaceBetween={20}
         slidesPerView={1}
-        className="w-full h-64 md:h-[30rem]"
+        className="w-auto h-64 md:h-[30rem]"
       >
         {images.map((image, index) => (
           <SwiperSlide

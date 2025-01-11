@@ -14,13 +14,13 @@ const Services = () => {
 
       <section className="min-h-[60vh] md:h-[70vh] w-full bg-green-100 flex flex-col items-center">
         <div className="text-center font-bold">
-          <h1 className="text-[3.5rem] md:text-8xl mt-16 md:mt-28">
+          <h1 className="text-[3.5rem] md:text-[5.5rem] mt-16 md:mt-24">
             <span style={{ color: "#FFA500" }}>Our</span> Services
           </h1>
         </div>
 
         <div className="text-center font-bold">
-          <h3 className="text-3xl md:text-5xl mt-4 md:mt-10">
+          <h3 className="text-3xl md:text-5xl mt-4 md:mt-8">
             How <span style={{ color: "#FFA500" }}>We</span> Help
           </h3>
         </div>
@@ -36,9 +36,9 @@ const Services = () => {
 
       {/* What We Do */}
 
-      <section className="w-full py-12 px-6 md:p-20">
+      <section className="w-full py-12 px-4 md:p-20">
         <div className="bg-green-100 rounded-[2rem]">
-          <div className="text-center py-12 md:py-20">
+          <div className="text-center pt-12 md:pt-20 md:pb-10">
             <h1 className="text-[2.75rem] md:text-8xl font-bold">
               What <span style={{ color: "#FFA500" }}>We</span> Do ?
             </h1>
@@ -47,7 +47,7 @@ const Services = () => {
               investors. Here’s how we make an impact:
             </p>
           </div>
-          <div className="pb-20 px-10">
+          <div className="pb-20 px-2 md:px-10">
             {serviceData.map((item, index) => (
               <ServiceItem
                 key={index}

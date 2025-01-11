@@ -1,6 +1,6 @@
 // src/About.js
 import React from "react";
-import { AboutBackgroundImage } from "../assets/images/images";
+import { AboutBackgroundImage, Come_join_us } from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -47,7 +47,14 @@ const About = () => {
       {/* Come join us */}
 
       <section className="w-full h-[80vh] flex justify-center items-center">
-        <div className="w-full h-[60vh] bg-green-200 text-center flex justify-center items-center">
+        <div
+          className="w-full h-[60vh] bg-green-200 text-center flex justify-center items-center"
+          style={{
+            backgroundImage: `url(${Come_join_us})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="md:mx-96 xl:mx-[24rem]">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold md:font-bold">
               COME JOIN WITH <span style={{ color: "#FFA500" }}>US!</span>
