@@ -14,7 +14,7 @@ const Services = () => {
 
       <section className="min-h-[60vh] md:h-[70vh] w-full bg-green-100 flex flex-col items-center">
         <div className="text-center font-bold">
-          <h1 className="text-[3.5rem] md:text-[5.5rem] mt-16 md:mt-24">
+          <h1 className="text-[3.5rem] md:text-[5.5rem] font-semibold mt-16 md:mt-24">
             <span style={{ color: "#FFA500" }}>Our</span> Services
           </h1>
         </div>

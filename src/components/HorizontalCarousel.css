@@ -4,13 +4,20 @@
   display: grid;
   grid-template-columns: repeat(5, 30%);
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
-  mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
+}
+
+/* Apply the mask effect only on devices larger than 768px (laptops, tablets, etc.) */
+@media (min-width: 768px) {
+  .gallery {
+    -webkit-mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
+    mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
+  }
 }
 
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(3, 60%); /* Adjust for mobile screens */
+
   }
 }
 
@@ -20,6 +27,7 @@
       2,
       80%
     ); /* Further adjustment for very small screens */
+
   }
 }
 

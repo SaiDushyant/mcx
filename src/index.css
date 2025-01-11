@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body > .skiptranslate {
+  display: none;
+}
+
+#google_translate_element {
+  display: inline-block;
+}

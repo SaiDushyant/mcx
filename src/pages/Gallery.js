@@ -38,7 +38,7 @@ const Gallery = () => {
           Showcasing some of <span style={{ color: "#FFA500" }}>Our</span>{" "}
           happiest moments!!
         </h1>
-        <div className="w-full">
+        <div className="w-full px-1 ">
           <HorizontalCarousel />
           <div className="hidden md:block">
             <HorizontalCarousel reverse />

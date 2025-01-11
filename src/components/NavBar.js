@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../assets/images/images";
+import LanguageDropdown from "./LanguageDropdown";
 
 function NavBar() {
   // State to control the visibility of the mobile menu
@@ -73,6 +74,8 @@ function NavBar() {
             )}
           </button>
         </div>
+
+        <LanguageDropdown />
       </div>
 
       {/* Mobile dropdown menu */}
