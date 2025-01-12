@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/mcx/static/css/main.8ae8296d.css",
-    "main.js": "/mcx/static/js/main.efd3c90d.js",
+    "main.css": "/mcx/static/css/main.b5c0c9d0.css",
+    "main.js": "/mcx/static/js/main.cb1cae20.js",
     "static/js/488.1658dfef.chunk.js": "/mcx/static/js/488.1658dfef.chunk.js",
+    "static/media/services3.png": "/mcx/static/media/services3.0157cc5f269ae8819cf2.png",
     "static/media/bg.png": "/mcx/static/media/bg.cc542a15ef6033e8f8ed.png",
+    "static/media/services5.png": "/mcx/static/media/services5.2dc5596bca661cf1454e.png",
+    "static/media/services4.png": "/mcx/static/media/services4.7cc5be7b456c2b1ef27c.png",
+    "static/media/services1.png": "/mcx/static/media/services1.62194337ac6c92121bc1.png",
     "static/media/about_bg.png": "/mcx/static/media/about_bg.4e4089ae12d784dffc37.png",
     "static/media/farmer.png": "/mcx/static/media/farmer.224540deba2cabab5a5e.png",
     "static/media/businessman.png": "/mcx/static/media/businessman.5e5c566e6600593039e6.png",
@@ -12,17 +16,19 @@
     "static/media/grainbag.png": "/mcx/static/media/grainbag.e4518077498eac94b19e.png",
     "static/media/corn.png": "/mcx/static/media/corn.0f2a13d03e2c0963fd99.png",
     "static/media/plant.png": "/mcx/static/media/plant.ccf0946afd3a8d5566b6.png",
+    "static/media/services2.png": "/mcx/static/media/services2.4790c83b9edc82c4db7c.png",
     "static/media/logo.png": "/mcx/static/media/logo.691f0c271624079b4611.png",
     "static/media/health.png": "/mcx/static/media/health.b8631350209c9630584b.png",
     "static/media/logo1.png": "/mcx/static/media/logo1.088d5f7b0b84785d96c4.png",
+    "static/media/coin.png": "/mcx/static/media/coin.11a5864ef8391464b80b.png",
     "static/media/come_join_us.png": "/mcx/static/media/come_join_us.99abac7c42816a450451.png",
     "index.html": "/mcx/index.html",
-    "main.8ae8296d.css.map": "/mcx/static/css/main.8ae8296d.css.map",
-    "main.efd3c90d.js.map": "/mcx/static/js/main.efd3c90d.js.map",
+    "main.b5c0c9d0.css.map": "/mcx/static/css/main.b5c0c9d0.css.map",
+    "main.cb1cae20.js.map": "/mcx/static/js/main.cb1cae20.js.map",
     "488.1658dfef.chunk.js.map": "/mcx/static/js/488.1658dfef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ae8296d.css",
-    "static/js/main.efd3c90d.js"
+    "static/css/main.b5c0c9d0.css",
+    "static/js/main.cb1cae20.js"
   ]
 }
