@@ -20,10 +20,10 @@ const Gallery = () => {
       <section className="w-full flex justify-center my-8">
         <div className="w-full max-w-7xl bg-green-100 p-6 rounded-2xl shadow-xl">
           <div className="text-center">
-            <h1 className="text-4xl md:text-7xl font-bold">
+            <h1 className="text-4xl md:text-[5.5rem] font-semibold">
               <span style={{ color: "#FFA500" }}>Our</span> Gallery
             </h1>
-            <p className="text-2xl text-gray-600">
+            <p className="text-2xl text-gray-600 mt-10">
               Frames that speak louder than words!
             </p>
           </div>
@@ -34,7 +34,7 @@ const Gallery = () => {
         </div>
       </section>
       <section className="w-full flex flex-col mb-16 md:mb-20">
-        <h1 className="text-3xl md:text-7xl my-12 md:my-16 font-bold text-center">
+        <h1 className="text-3xl md:text-7xl my-12 md:my-16 font-semibold text-center">
           Showcasing some of <span style={{ color: "#FFA500" }}>Our</span>{" "}
           happiest moments!!
         </h1>

@@ -3,6 +3,7 @@ import BackgroundImage from "./bg.png";
 import BusinessMan from "./businessman.png";
 import Come_join_us from "./come_join_us.png";
 import Corn from "./corn.png";
+import Farmer from "./farmer.png";
 import GrainBag from "./grainbag.png";
 import Health from "./health.png";
 import Logo from "./logo.png";
@@ -16,6 +17,7 @@ export {
   BusinessMan,
   Come_join_us,
   Corn,
+  Farmer,
   GrainBag,
   Health,
   Logo,

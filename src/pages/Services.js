@@ -12,15 +12,15 @@ const Services = () => {
 
       {/* Our Services */}
 
-      <section className="min-h-[60vh] md:h-[70vh] w-full bg-green-100 flex flex-col items-center">
+      <section className="h-[450px] md:h-[500px] xl:h-[550px] w-full bg-green-100 flex flex-col items-center">
         <div className="text-center font-bold">
           <h1 className="text-[3.5rem] md:text-[5.5rem] font-semibold mt-16 md:mt-24">
             <span style={{ color: "#FFA500" }}>Our</span> Services
           </h1>
         </div>
 
-        <div className="text-center font-bold">
-          <h3 className="text-3xl md:text-5xl mt-4 md:mt-8">
+        <div className="text-center font-semibold">
+          <h3 className="text-3xl md:text-5xl mt-4 md:mt-6">
             How <span style={{ color: "#FFA500" }}>We</span> Help
           </h3>
         </div>
@@ -39,7 +39,7 @@ const Services = () => {
       <section className="w-full py-12 px-4 md:p-20">
         <div className="bg-green-100 rounded-[2rem]">
           <div className="text-center pt-12 md:pt-20 md:pb-10">
-            <h1 className="text-[2.75rem] md:text-8xl font-bold">
+            <h1 className="text-[2.75rem] md:text-8xl font-semibold">
               What <span style={{ color: "#FFA500" }}>We</span> Do ?
             </h1>
             <p className="text-base px-4 md:text-3xl mt-6 md:mt-10">

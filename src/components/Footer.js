@@ -10,12 +10,12 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div class="" data-negative="false">
+      <div data-negative="false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
-          class="w-full h-10 mt-8 sm:mt-16 sm:h-16 bg-green-700"
+          className="w-full h-10 mt-8 sm:mt-16 sm:h-16 bg-green-700"
         >
           <path
             fill="white"
@@ -37,7 +37,7 @@ const Footer = () => {
             {/* Menu Section */}
             <div className="w-full sm:w-1/2">
               <h1
-                className="text-xl md:text-4xl font-bold "
+                className="text-xl md:text-4xl font-semibold "
                 style={{ color: "#FFA500" }}
               >
                 Menu
@@ -89,7 +89,7 @@ const Footer = () => {
             {/* Follow Us Section */}
             <div className="w-full sm:w-1/2">
               <h2
-                className="text-xl md:text-4xl font-bold"
+                className="text-xl md:text-4xl font-semibold"
                 style={{ color: "#FFA500" }}
               >
                 Follow Us
@@ -114,7 +114,7 @@ const Footer = () => {
           {/* Contact Info Section */}
           <div className="w-full">
             <h2
-              className="text-xl md:text-3xl font-bold"
+              className="text-xl md:text-4xl font-semibold"
               style={{ color: "#FFA500" }}
             >
               Contact Info

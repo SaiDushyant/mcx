@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { FiGlobe } from "react-icons/fi"; // Import a globe icon
 import GoogleTranslate from "./GoogleTranslate";
 
 const LanguageDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative inline-block text-left">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm p-2 text-center inline-flex items-center"
+        className="text-white bg-[#f97316] hover:bg-[#e1620f] font-medium rounded-lg text-sm px-4 py-2 inline-flex items-center"
       >
+        <FiGlobe className="w-5 h-5 mr-2" />
         Language
         <svg
           className="w-4 h-4 ml-2"
@@ -29,12 +31,17 @@ const LanguageDropdown = () => {
 
       {isOpen && (
         <div
-          className="absolute mt-2 bg-white border border-gray-300 rounded-lg shadow-lg"
-          style={{ width: "200px" }}
+          id="langdropdown"
+          className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[white] border border-gray-300 absolute mt-2"
         >
-          <ul className="py-2">
+          <ul
+            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownDefaultButton"
+          >
             <li>
-              <GoogleTranslate />
+              <div className="p-0" id="google_translate_element">
+                <GoogleTranslate />
+              </div>
             </li>
           </ul>
         </div>

@@ -1,6 +1,10 @@
 // src/About.js
 import React from "react";
-import { AboutBackgroundImage, Come_join_us } from "../assets/images/images";
+import {
+  AboutBackgroundImage,
+  Come_join_us,
+  Farmer,
+} from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -20,7 +24,7 @@ const About = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="mt-40 md:mt-20 xl:mx-[26rem]">
+          <div className="mt-40 md:mt-16 xl:mx-[26rem]">
             <h1 className="text-5xl md:text-[5.5rem] font-semibold">
               About <span style={{ color: "#FFA500" }}>Us</span>
             </h1>
@@ -40,9 +44,54 @@ const About = () => {
       {/* News Letter */}
 
       <section
-        className="w-full h-screen"
+        className="w-full px-40 hidden lg:block"
         style={{ backgroundColor: "#FAF3E0" }}
-      ></section>
+      >
+        <div className="text-center">
+          <h1 className="text-8xl font-semibold pt-12 py-10">
+            The Story Behind Our Mission
+          </h1>
+          <div className="w-full mx-auto bg-white h-[5px]"></div>
+        </div>
+
+        <div className=" mt-10 mx-12">
+          <p className="text-3xl font-semibold text-center">
+            "Empowering Farmers, Transforming Lives: A Journey of Dedication to
+            Growth, Collaboration, and Sustainable Agriculture"
+          </p>
+          {/* Text */}
+          <div className="flex text-justify text-3xl  mr-5 py-10">
+            <div>
+              <p>
+                It all began with a vision: to empower the backbone of our
+                society—farmers—and create a platform for impactful investments.
+                With a commitment to fostering global collaboration, MCX
+                Foundation laid the foundation for bridging the gap between
+                foreign investors and local farming communities.
+              </p>
+              <p className="mt-4">
+                Over the years, the company has grown into a trusted partner for
+                countless farmers, offering financial support, resources, and
+                medical assistance. Our journey is a testament to the power of
+                collective effort and innovation, transforming challenges into
+                opportunities.
+              </p>
+              <p className="mt-4">
+                As we look to the future, MCX Foundation remains steadfast in
+                its mission to nurture agriculture and build a sustainable
+                tomorrow for all.
+              </p>
+            </div>
+
+            {/* Image */}
+            <img
+              src={Farmer} // Dummy image
+              alt="Our Mission"
+              className="rounded-lg w-[22rem] max-w-sm ml-12"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Come join us */}
 
@@ -56,7 +105,7 @@ const About = () => {
           }}
         >
           <div className="md:mx-96 xl:mx-[24rem]">
-            <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold md:font-bold">
+            <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold md:font-semibold">
               COME JOIN WITH <span style={{ color: "#FFA500" }}>US!</span>
             </h1>
             <p className="text-base md:text-2xl mt-5 md:mt-10 font-medium">
@@ -74,7 +123,7 @@ const About = () => {
 
       <section className="py-10">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold md:text-6xl text-gray-800">
+          <h2 className="text-3xl font-semibold md:text-6xl text-gray-800">
             Meet <span style={{ color: "#FFA500" }}>Our</span> Founders
           </h2>
         </div>

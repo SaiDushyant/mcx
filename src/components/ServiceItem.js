@@ -5,7 +5,7 @@ const ServiceItem = ({ title, description, image, reverse }) => {
     <div className="mt-16 space-y-8 px-4 md:px-10">
       {/* Title */}
       <div className="text-center md:text-start">
-        <h2 className="text-3xl md:text-5xl font-bold">{title}</h2>
+        <h2 className="text-3xl md:text-5xl font-semibold">{title}</h2>
       </div>
 
       {/* Content */}

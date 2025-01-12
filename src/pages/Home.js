@@ -171,14 +171,14 @@ const Home = () => {
 
       <section className="w-full min-h-screen flex flex-col items-center">
         <div className="text-center mt-16">
-          <h1 className="text-5xl md:text-7xl font-bold">
+          <h1 className="text-5xl md:text-7xl font-semibold">
             Contact <span style={{ color: "#FFA500" }}>US</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl" style={{ color: "#717171" }}>
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-3/5 max-w-[1000px] flex mb-10 overflow-hidden">
+        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-4/5 max-w-[1200px] flex mb-10 overflow-hidden">
           {/* LEFT side  */}
 
           <div
@@ -238,8 +238,8 @@ const Home = () => {
 
           {/* RIGHT side */}
 
-          <div className="w-full p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3 md:mt-6">
+          <div className="w-full p-6 xl:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 xl:gap-10 mt-3 md:mt-6">
               {/* Name Field */}
               <div className="relative">
                 <input
@@ -392,7 +392,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-4">
+            <div className="mt-8">
               <h1 className="text-xl font-semibold">Message</h1>
               <input
                 type="text"
