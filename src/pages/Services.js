@@ -12,21 +12,21 @@ const Services = () => {
 
       {/* Our Services */}
 
-      <section className="h-[450px] md:h-[500px] xl:h-[550px] w-full bg-green-100 flex flex-col items-center">
+      <section className="h-[450px] md:h-[500px] xl:h-[550px] w-full bg-green-700 flex flex-col items-center rounded-b-full">
         <div className="text-center font-bold">
-          <h1 className="text-[3.5rem] md:text-[5.5rem] font-semibold mt-16 md:mt-24">
+          <h1 className="text-[3.5rem] md:text-[5.5rem] text-white font-semibold mt-16 md:mt-24">
             <span style={{ color: "#FFA500" }}>Our</span> Services
           </h1>
         </div>
 
         <div className="text-center font-semibold">
-          <h3 className="text-3xl md:text-5xl mt-4 md:mt-6">
+          <h3 className="text-3xl md:text-5xl mt-4 md:mt-6 text-white">
             How <span style={{ color: "#FFA500" }}>We</span> Help
           </h3>
         </div>
 
         <div className="text-center font-medium max-w-4xl px-4">
-          <p className="text-lg md:text-2xl mt-6 md:mt-10">
+          <p className="text-lg md:text-2xl mt-6 md:mt-10 text-white">
             From empowering farmers to delivering impactful investment
             opportunities, our comprehensive services make growth achievable.
             Together, we're building a stronger agricultural future.

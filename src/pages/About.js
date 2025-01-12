@@ -15,7 +15,7 @@ const About = () => {
 
       {/* Hero Section */}
 
-      <section className="relative h-[650px] md:h-[650px] xl:h-[800px]  flex items-center">
+      <section className="relative h-screen flex items-center">
         <div
           className="absolute inset-0 z-0 text-center"
           style={{
@@ -24,7 +24,7 @@ const About = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="mt-40 md:mt-32 2xl:mt-36 xl:mx-[26rem]">
+          <div className="mt-56 md:mt-32 2xl:mt-36 xl:mx-[26rem]">
             <h1 className="text-5xl md:text-[5.5rem] font-semibold">
               About <span style={{ color: "#FFA500" }}>Us</span>
             </h1>
