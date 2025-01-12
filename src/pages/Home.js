@@ -36,7 +36,7 @@ const Home = () => {
 
       {/* Hero Section */}
 
-      <section className="relative h-[600px] xl:h-[770px] flex items-center">
+      <section className="relative h-[500px] 2xl:h-[800px] flex items-center">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -49,7 +49,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="ml-20 px-4 relative z-10">
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl font-bold mb-6">Growing Future Together</h1>
             <p className="text-xl mb-8">
@@ -182,12 +182,12 @@ const Home = () => {
           {/* LEFT side  */}
 
           <div
-            className="p-6 md:py-10 xl:px-10 md:max-w-[40%] hidden md:block"
-            style={{ backgroundColor: "#87986A" }}
+            className="p-6 md:py-10 xl:px-10 md:max-w-[40%] hidden md:block bg-green-700"
+            // style={{ backgroundColor: "#87986A" }}
           >
             <div className="">
               <h3 className="text-3xl text-white">Contact Information</h3>
-              <h6 className="text-xl" style={{ color: "#C9C9C9" }}>
+              <h6 className="text-xl text-white">
                 Something to say? Contact us !
               </h6>
             </div>
@@ -334,15 +334,18 @@ const Home = () => {
                 <div className="flex items-center justify-center">
                   <input
                     id="funding"
-                    className="peer"
+                    className="peer hidden"
                     type="radio"
                     name="status"
                   />
                   <label
                     htmlFor="funding"
-                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:text-orange-500 flex items-center cursor-pointer"
                   >
-                    Funding
+                    <div className="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center peer-checked:border-orange-500 peer-checked:bg-orange-500">
+                      <div className="w-2.5 h-2.5 bg-white rounded-full"></div>
+                    </div>
+                    <span className="ml-2 whitespace-nowrap">Funding</span>
                   </label>
                 </div>
 
@@ -355,7 +358,7 @@ const Home = () => {
                   />
                   <label
                     htmlFor="medical-support"
-                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:text-orange-500 ml-2 whitespace-nowrap"
                   >
                     Medical Support
                   </label>
@@ -370,7 +373,7 @@ const Home = () => {
                   />
                   <label
                     htmlFor="material"
-                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:text-orange-500 ml-2 whitespace-nowrap"
                   >
                     Material
                   </label>
@@ -385,7 +388,7 @@ const Home = () => {
                   />
                   <label
                     htmlFor="general-inquiry"
-                    className="peer-checked:text-sky-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:text-orange-500 ml-2 whitespace-nowrap"
                   >
                     General Inquiry
                   </label>
@@ -401,8 +404,8 @@ const Home = () => {
               />
               <div className="w-full mt-6">
                 <button
-                  className="w-fit px-8 py-3 text-center rounded-lg text-white font-semibold float-right"
-                  style={{ backgroundColor: "#87986A" }}
+                  className="w-fit px-8 py-3 text-center rounded-lg text-white font-semibold float-right bg-green-700"
+                  // style={{ backgroundColor: "#87986A" }}
                 >
                   Send Message
                 </button>

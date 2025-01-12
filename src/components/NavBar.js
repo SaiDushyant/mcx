@@ -14,7 +14,7 @@ function NavBar() {
 
   return (
     <nav className="w-full fixed z-50">
-      <div className="flex items-center justify-between h-fit px-5 py-3 mx-10 mt-5 rounded-xl text-green-800 bg-white border border-gray-300 shadow-xl">
+      <div className="flex items-center justify-between h-fit px-5 md:py-1 xl:py-3 mx-10 mt-5 rounded-xl text-green-800 bg-white shadow-xl">
         <NavLink to="/" className="flex items-center">
           <img src={Logo1} alt="logo" className="w-52 mt-2" />
         </NavLink>
