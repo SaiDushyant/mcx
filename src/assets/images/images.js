@@ -7,10 +7,10 @@ import Farmer from "./farmer.png";
 import GrainBag from "./grainbag.png";
 import Health from "./health.png";
 import Logo from "./logo.png";
+import Logo1 from "./logo1.png";
 import PlantImage from "./plant.png";
 import Sack from "./sack.png";
 import Wheat1 from "./wheat1.png";
-
 export {
   AboutBackgroundImage,
   BackgroundImage,
@@ -21,6 +21,7 @@ export {
   GrainBag,
   Health,
   Logo,
+  Logo1,
   PlantImage,
   Sack,
   Wheat1,

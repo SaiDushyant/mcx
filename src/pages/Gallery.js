@@ -17,7 +17,7 @@ const Gallery = () => {
   return (
     <>
       <NavBar />
-      <section className="w-full flex justify-center my-8">
+      <section className="w-full flex justify-center pt-32 pb-8">
         <div className="w-full max-w-7xl bg-green-100 p-6 rounded-2xl shadow-xl">
           <div className="text-center">
             <h1 className="text-4xl md:text-[5.5rem] font-semibold">

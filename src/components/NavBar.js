@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Logo } from "../assets/images/images";
+import { Logo1 } from "../assets/images/images";
 import LanguageDropdown from "./LanguageDropdown";
 
 function NavBar() {
@@ -13,18 +13,18 @@ function NavBar() {
   };
 
   return (
-    <nav className="text-green-900 z-50 sticky top-0 backdrop-blur-md bg-green-300">
-      <div className="flex items-center justify-between h-[5.5rem]">
+    <nav className="w-full fixed z-50">
+      <div className="flex items-center justify-between h-fit px-5 py-3 mx-10 mt-5 rounded-xl text-green-800 bg-white border border-gray-300 shadow-xl">
         <NavLink to="/" className="flex items-center">
-          <img src={Logo} alt="logo" className="w-44 md:ml-16 mt-2" />
+          <img src={Logo1} alt="logo" className="w-52 mt-2" />
         </NavLink>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-6 mr-24">
+        <div className="hidden md:flex space-x-10 mr-24">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `hover:text-green text-2xl ${
+              `hover:text-green text-3xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -34,7 +34,7 @@ function NavBar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `hover:text-green text-2xl ${
+              `hover:text-green text-3xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -44,7 +44,7 @@ function NavBar() {
           <NavLink
             to="/services"
             className={({ isActive }) =>
-              `hover:text-green text-2xl ${
+              `hover:text-green text-3xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -54,7 +54,7 @@ function NavBar() {
           <NavLink
             to="/gallery"
             className={({ isActive }) =>
-              `hover:text-green text-2xl ${
+              `hover:text-green text-3xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }

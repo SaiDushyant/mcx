@@ -15,7 +15,7 @@ const About = () => {
 
       {/* Hero Section */}
 
-      <section className="relative h-[650px] md:h-[550px] xl:h-[650px] md:my-16  flex items-center">
+      <section className="relative h-[650px] md:h-[550px] xl:h-[650px]  flex items-center">
         <div
           className="absolute inset-0 z-0 text-center"
           style={{
@@ -51,7 +51,7 @@ const About = () => {
           <h1 className="text-8xl font-semibold pt-12 py-10">
             The Story Behind Our Mission
           </h1>
-          <div className="w-full mx-auto bg-white h-[5px]"></div>
+          <div className="w-full mx-auto bg-gray-300 h-[5px]"></div>
         </div>
 
         <div className=" mt-10 mx-12">
@@ -128,7 +128,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-24">
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-24">
           {/* Founder 1 */}
           <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center hover:scale-105 duration-300 border border-gray-200">
             <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
