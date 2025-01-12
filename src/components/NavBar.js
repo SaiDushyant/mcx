@@ -14,7 +14,7 @@ function NavBar() {
 
   return (
     <nav className="w-full fixed z-50">
-      <div className="flex items-center justify-between h-fit px-5 md:py-1 xl:py-3 mx-10 mt-5 rounded-xl text-green-800 bg-white shadow-xl">
+      <div className="flex items-center justify-between h-fit px-5 py-2 md:px-5 md:py-3 mx-2 md:mx-10 mt-5 rounded-xl text-green-800 bg-white shadow-xl">
         <NavLink to="/" className="flex items-center">
           <img src={Logo1} alt="logo" className="w-52 mt-2" />
         </NavLink>
@@ -64,9 +64,9 @@ function NavBar() {
         </div>
 
         {/* Mobile menu */}
-        <div className="md:hidden flex items-center mr-10">
+        <div className="md:hidden flex items-center">
           {/* Hamburger icon */}
-          <button onClick={toggleMenu} className="text-white">
+          <button onClick={toggleMenu} className="text-green-700">
             {isMenuOpen ? (
               <span className="text-4xl">×</span> // Cross icon
             ) : (

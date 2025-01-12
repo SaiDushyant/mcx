@@ -10,7 +10,8 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { BusinessMan, Health, Sack } from "../assets/images/images";
+import { NavLink } from "react-router-dom";
+import { BusinessMan, Coin, Health, Sack } from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import "./animation.css";
@@ -49,20 +50,20 @@ const Home = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
 
-        <div className="ml-20 px-4 relative z-10">
+        <div className="md:ml-20 px-4 relative z-10">
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl font-bold mb-6">Growing Future Together</h1>
             <p className="text-xl mb-8">
               Empowering farmers with tools, finance, and healthcare to
               cultivate a brighter future.
             </p>
-            <a
-              href="/about"
+            <NavLink
+              to="/about"
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
             >
               Learn More
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </NavLink>
           </div>
         </div>
       </section>
@@ -72,8 +73,8 @@ const Home = () => {
       <section className="w-full md:min-h-[900px] flex justify-center items-center py-14">
         {/* Center content */}
         <div
-          className="rounded-[2rem] md:rounded-[3rem] p-6 w-auto max-w-[22rem] md:max-w-6xl"
-          style={{ backgroundColor: "#F7F9F2" }}
+          className="rounded-[2rem] md:rounded-[3rem] p-6 w-auto max-w-[22rem] md:max-w-6xl shadow-xl"
+          style={{ backgroundColor: "#FAF3E0" }}
         >
           <h1 className="text-4xl md:text-7xl font-semibold text-center md:my-6">
             Who <span style={{ color: "#FFA500" }}>WE</span> are{" "}
@@ -123,7 +124,7 @@ const Home = () => {
             className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
-            <img src={Sack} alt="Coin" className="w-28 mb-4" />
+            <img src={Coin} alt="Coin" className="w-28 mb-4" />
             <h1 className="text-2xl font-bold text-center mb-2">
               Financial Support
             </h1>
@@ -136,7 +137,7 @@ const Home = () => {
 
           {/* Resource Assistance */}
           <div
-            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
+            className="w-80 h-72  hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Sack} alt="Coin" className="w-28 mb-4" />
@@ -152,7 +153,7 @@ const Home = () => {
 
           {/* Healthcare for Farmers */}
           <div
-            className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
+            className="w-80 h-72  hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
             <img src={Health} alt="Coin" className="w-28 " />
@@ -334,18 +335,15 @@ const Home = () => {
                 <div className="flex items-center justify-center">
                   <input
                     id="funding"
-                    className="peer hidden"
+                    className="peer"
                     type="radio"
                     name="status"
                   />
                   <label
                     htmlFor="funding"
-                    className="peer-checked:text-orange-500 flex items-center cursor-pointer"
+                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
                   >
-                    <div className="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center peer-checked:border-orange-500 peer-checked:bg-orange-500">
-                      <div className="w-2.5 h-2.5 bg-white rounded-full"></div>
-                    </div>
-                    <span className="ml-2 whitespace-nowrap">Funding</span>
+                    Funding
                   </label>
                 </div>
 
@@ -358,7 +356,7 @@ const Home = () => {
                   />
                   <label
                     htmlFor="medical-support"
-                    className="peer-checked:text-orange-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
                   >
                     Medical Support
                   </label>
@@ -373,7 +371,7 @@ const Home = () => {
                   />
                   <label
                     htmlFor="material"
-                    className="peer-checked:text-orange-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
                   >
                     Material
                   </label>
@@ -388,7 +386,7 @@ const Home = () => {
                   />
                   <label
                     htmlFor="general-inquiry"
-                    className="peer-checked:text-orange-500 ml-2 whitespace-nowrap"
+                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
                   >
                     General Inquiry
                   </label>
@@ -404,7 +402,7 @@ const Home = () => {
               />
               <div className="w-full mt-6">
                 <button
-                  className="w-fit px-8 py-3 text-center rounded-lg text-white font-semibold float-right bg-green-700"
+                  className="w-fit px-8 py-3 text-center rounded-lg text-white font-semibold float-right bg-green-600 hover:bg-green-700"
                   // style={{ backgroundColor: "#87986A" }}
                 >
                   Send Message

@@ -6,7 +6,7 @@ const LanguageDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative text-left hidden md:inline-block">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="text-white bg-[#f97316] hover:bg-[#e1620f] font-medium rounded-lg text-sm px-4 py-2 inline-flex items-center"
