@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/mcx/static/css/main.5cd023e2.css",
-    "main.js": "/mcx/static/js/main.f1d15f87.js",
+    "main.css": "/mcx/static/css/main.f8a88ac1.css",
+    "main.js": "/mcx/static/js/main.f2e57217.js",
     "static/js/488.1658dfef.chunk.js": "/mcx/static/js/488.1658dfef.chunk.js",
     "static/media/bg.png": "/mcx/static/media/bg.cc542a15ef6033e8f8ed.png",
     "static/media/about_bg.png": "/mcx/static/media/about_bg.4e4089ae12d784dffc37.png",
+    "static/media/farmer.png": "/mcx/static/media/farmer.224540deba2cabab5a5e.png",
     "static/media/businessman.png": "/mcx/static/media/businessman.5e5c566e6600593039e6.png",
     "static/media/sack.png": "/mcx/static/media/sack.57e288f5230add5f60a3.png",
     "static/media/wheat1.png": "/mcx/static/media/wheat1.e438872f9a07d9ef7a5b.png",
@@ -15,12 +16,12 @@
     "static/media/health.png": "/mcx/static/media/health.b8631350209c9630584b.png",
     "static/media/come_join_us.png": "/mcx/static/media/come_join_us.99abac7c42816a450451.png",
     "index.html": "/mcx/index.html",
-    "main.5cd023e2.css.map": "/mcx/static/css/main.5cd023e2.css.map",
-    "main.f1d15f87.js.map": "/mcx/static/js/main.f1d15f87.js.map",
+    "main.f8a88ac1.css.map": "/mcx/static/css/main.f8a88ac1.css.map",
+    "main.f2e57217.js.map": "/mcx/static/js/main.f2e57217.js.map",
     "488.1658dfef.chunk.js.map": "/mcx/static/js/488.1658dfef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cd023e2.css",
-    "static/js/main.f1d15f87.js"
+    "static/css/main.f8a88ac1.css",
+    "static/js/main.f2e57217.js"
   ]
 }
