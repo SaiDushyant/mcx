@@ -38,49 +38,70 @@ function Admin() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Admin Feedback Panel</h1>
+    <div className="p-6 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">
+        Admin Feedback Panel
+      </h1>
       {loading ? (
-        <p>Loading feedbacks...</p>
+        <p className="text-gray-600 text-center">Loading feedbacks...</p>
       ) : feedbacks.length === 0 ? (
-        <p>No feedbacks available.</p>
+        <p className="text-gray-600 text-center">No feedbacks available.</p>
       ) : (
-        <table className="min-w-full border-collapse border border-gray-300">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-4 py-2">Name</th>
-              <th className="border border-gray-300 px-4 py-2">Place</th>
-              <th className="border border-gray-300 px-4 py-2">Email</th>
-              <th className="border border-gray-300 px-4 py-2">Phone</th>
-              <th className="border border-gray-300 px-4 py-2">Service</th>
-              <th className="border border-gray-300 px-4 py-2">Message</th>
-            </tr>
-          </thead>
-          <tbody>
-            {feedbacks.map((feedback, index) => (
-              <tr key={index} className="text-center">
-                <td className="border border-gray-300 px-4 py-2">
-                  {feedback.name}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {feedback.place}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {feedback.email}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {feedback.phone}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {feedback.service}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {feedback.message}
-                </td>
+        <div className="overflow-x-auto">
+          <table className="min-w-full border-collapse border border-gray-300 shadow-md rounded-lg">
+            <thead>
+              <tr className="bg-gray-100 text-gray-700">
+                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
+                  Name
+                </th>
+                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
+                  Place
+                </th>
+                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
+                  Email
+                </th>
+                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
+                  Phone
+                </th>
+                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
+                  Service
+                </th>
+                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
+                  Message
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {feedbacks.map((feedback, index) => (
+                <tr
+                  key={index}
+                  className={`text-gray-800 ${
+                    index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                  }`}
+                >
+                  <td className="border border-gray-300 px-6 py-4">
+                    {feedback.name}
+                  </td>
+                  <td className="border border-gray-300 px-6 py-4">
+                    {feedback.place}
+                  </td>
+                  <td className="border border-gray-300 px-6 py-4">
+                    {feedback.email}
+                  </td>
+                  <td className="border border-gray-300 px-6 py-4">
+                    {feedback.phone}
+                  </td>
+                  <td className="border border-gray-300 px-6 py-4">
+                    {feedback.service}
+                  </td>
+                  <td className="border border-gray-300 px-6 py-4">
+                    {feedback.message}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
