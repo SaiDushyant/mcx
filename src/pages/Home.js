@@ -14,22 +14,50 @@ import { NavLink } from "react-router-dom";
 import { BusinessMan, Coin, Health, Sack } from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import { supabase } from "../supabaseClient";
 import "./animation.css";
 
 const Home = () => {
-  const [values, setValues] = useState({
+  const [formValues, setFormValues] = useState({
     name: "",
     place: "",
     email: "",
     phone: "",
+    status: "",
+    message: "",
   });
 
-  const handleInputChange = (event) => {
-    const { id, value } = event.target;
-    setValues((prevValues) => ({
-      ...prevValues,
-      [id]: value.trim(),
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormValues((prevState) => ({
+      ...prevState,
+      [id]: value,
     }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { name, place, email, phone, status, message } = formValues;
+
+    // Save data to Supabase
+    const { error } = await supabase
+      .from("feedback")
+      .insert([{ name, place, email, phone, status, message }]);
+
+    if (error) {
+      alert("Error submitting feedback: " + error.message);
+    } else {
+      alert("Feedback submitted successfully!");
+      setFormValues({
+        name: "",
+        place: "",
+        email: "",
+        phone: "",
+        status: "",
+        message: "",
+      });
+    }
   };
   return (
     <>
@@ -52,7 +80,9 @@ const Home = () => {
 
         <div className="md:ml-20 px-4 relative z-10">
           <div className="max-w-3xl text-white">
-            <h1 className="text-6xl font-bold mb-6">Growing Future Together</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Growing Future Together
+            </h1>
             <p className="text-xl mb-8">
               Empowering farmers with tools, finance, and healthcare to
               cultivate <br />a brighter future.
@@ -170,7 +200,7 @@ const Home = () => {
 
       {/* Contact Form */}
 
-      <section className="w-full min-h-screen flex flex-col items-center">
+      <section id="contact" className="w-full min-h-screen flex flex-col items-center">
         <div className="text-center mt-16">
           <h1 className="text-5xl md:text-7xl font-semibold">
             Contact <span style={{ color: "#FFA500" }}>US</span>
@@ -239,7 +269,7 @@ const Home = () => {
 
           {/* RIGHT side */}
 
-          <div className="w-full p-6 xl:p-10">
+          <form onSubmit={handleSubmit} className="w-full p-6 xl:p-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 xl:gap-10 mt-3 md:mt-6">
               {/* Name Field */}
               <div className="relative">
@@ -249,12 +279,12 @@ const Home = () => {
                   placeholder="" // Use an empty string here
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
-                  value={values.name}
+                  value={formValues.name}
                 />
                 <label
                   htmlFor="name"
                   className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
-                    values.name
+                    formValues.name
                       ? " -translate-y-6 text-black font-semibold"
                       : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
                   } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
@@ -271,12 +301,12 @@ const Home = () => {
                   placeholder=" "
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
-                  value={values.place}
+                  value={formValues.place}
                 />
                 <label
                   htmlFor="place"
                   className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
-                    values.place
+                    formValues.place
                       ? "-translate-y-6 text-black font-semibold"
                       : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
                   } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
@@ -293,12 +323,12 @@ const Home = () => {
                   placeholder=" "
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
-                  value={values.email}
+                  value={formValues.email}
                 />
                 <label
                   htmlFor="email"
                   className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
-                    values.email
+                    formValues.email
                       ? "-translate-y-6 text-black font-semibold"
                       : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
                   } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
@@ -310,17 +340,17 @@ const Home = () => {
               {/* Phone Number Field */}
               <div className="relative">
                 <input
-                  type="text"
+                  type="number"
                   id="phone"
                   placeholder=" "
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
-                  value={values.phone}
+                  value={formValues.phone}
                 />
                 <label
                   htmlFor="phone"
                   className={`absolute left-1 top-1 text-xl transform transition-all duration-200 ${
-                    values.phone
+                    formValues.phone
                       ? "-translate-y-6 text-black font-semibold"
                       : "peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-gray-400"
                   } peer-focus:text-orange-500 peer-focus:-translate-y-6 peer-focus:font-bold`}
@@ -329,87 +359,64 @@ const Home = () => {
                 </label>
               </div>
             </div>
+            {/* Status Field */}
             <div className="mt-8">
               <h1 className="text-xl font-semibold">Select Services</h1>
               <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mt-5">
-                <div className="flex items-center justify-center">
-                  <input
-                    id="funding"
-                    className="peer"
-                    type="radio"
-                    name="status"
-                  />
-                  <label
-                    htmlFor="funding"
-                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
+                {[
+                  "Funding",
+                  "Medical Support",
+                  "Material",
+                  "General Inquiry",
+                ].map((service) => (
+                  <div
+                    key={service}
+                    className="flex items-center justify-center"
                   >
-                    Funding
-                  </label>
-                </div>
-
-                <div className="flex items-center justify-center">
-                  <input
-                    id="medical-support"
-                    className="peer"
-                    type="radio"
-                    name="status"
-                  />
-                  <label
-                    htmlFor="medical-support"
-                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
-                  >
-                    Medical Support
-                  </label>
-                </div>
-
-                <div className="flex items-center justify-center">
-                  <input
-                    id="material"
-                    className="peer"
-                    type="radio"
-                    name="status"
-                  />
-                  <label
-                    htmlFor="material"
-                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
-                  >
-                    Material
-                  </label>
-                </div>
-
-                <div className="flex items-center justify-center">
-                  <input
-                    id="general-inquiry"
-                    className="peer"
-                    type="radio"
-                    name="status"
-                  />
-                  <label
-                    htmlFor="general-inquiry"
-                    className="peer-checked:font-semibold ml-2 whitespace-nowrap"
-                  >
-                    General Inquiry
-                  </label>
-                </div>
+                    <input
+                      type="radio"
+                      id={service.toLowerCase().replace(" ", "-")}
+                      name="status"
+                      value={service}
+                      onChange={(e) =>
+                        setFormValues((prev) => ({
+                          ...prev,
+                          status: e.target.value,
+                        }))
+                      }
+                      required
+                    />
+                    <label
+                      htmlFor={service.toLowerCase().replace(" ", "-")}
+                      className="ml-2 whitespace-nowrap"
+                    >
+                      {service}
+                    </label>
+                  </div>
+                ))}
               </div>
             </div>
+            {/* Message Field */}
             <div className="mt-8">
               <h1 className="text-xl font-semibold">Message</h1>
-              <input
-                type="text"
+              <textarea
+                id="message"
+                value={formValues.message}
+                onChange={handleInputChange}
+                className="w-full h-8 pl-2 border-b-2 border-gray-300 focus:border-orange-500 focus:outline-none mt-2"
                 placeholder="Write your message..."
-                className="w-full border-b-2 border-gray-300 focus:border-orange-500 focus:outline-none mt-2"
-              />
+                required
+              ></textarea>
               <div className="w-full mt-6">
                 <button
-                  className="w-fit px-8 py-3 text-center rounded-lg text-white font-semibold float-right bg-green-600 hover:bg-green-700"
-                  // style={{ backgroundColor: "#87986A" }}
+                  type="submit"
+                  className="w-fit px-6 py-3 text-center rounded-lg text-white float-right font-semibold bg-green-600 hover:bg-green-700 inline-flex items-center"
                 >
-                  Send Message
+                  Send Message <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </section>
 

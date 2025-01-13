@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { About, Gallery, Home, Services } from "./pages"; // Importing from pages/index.js
+import { About, Admin, Gallery, Home, Login, Services } from "./pages"; // Importing from pages/index.js
 
 function App() {
   return (
@@ -11,6 +11,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/admin" element={<Admin />} />{" "}
+          <Route path="/login" element={<Login />} />
         </Routes>
       </header>
     </div>

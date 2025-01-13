@@ -2,10 +2,13 @@ import React from "react";
 import {
   FaFacebook,
   FaInstagram,
+  FaLocationDot,
+  FaPhone,
   FaTelegram,
   FaTwitter,
 } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
+import { IoIosMail } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -120,33 +123,41 @@ const Footer = () => {
             >
               Contact Info
             </h2>
-            <div className="space-y-1 md:space-y-3 mt-1 md:mt-3 text-base md:text-xl pl-1">
-              <p className="text-white">
-                <span className="font-semibold">Phone: </span>
+            <div className="space-y-3 mt-3 text-base md:text-xl pl-1">
+              <div className="text-white flex items-center gap-2">
+                <span className="font-semibold">
+                  <FaPhone size={20} /> {/* Adjust icon size */}
+                </span>
                 <a
                   href="tel:+919080103716"
-                  className="underline underline-offset-2 inline-flex items-center"
+                  className="underline underline-offset-2 inline-flex items-center text-white ml-2"
                 >
                   +91 9080103716
                   <FiExternalLink className="w-6" />
                 </a>
-              </p>
-              <p className="text-white">
-                <span className="font-semibold">Email: </span>
+              </div>
+
+              <div className="text-white flex items-center gap-2">
+                <span className="font-semibold">
+                  <IoIosMail size={24} /> {/* Adjust icon size */}
+                </span>
                 <a
                   href="mailto:mcxfoundation@gmail.com"
-                  className="underline underline-offset-2 inline-flex items-center"
+                  className="underline underline-offset-2 inline-flex items-center text-white ml-2"
                 >
                   mcxfoundation@gmail.com <FiExternalLink className="w-6" />
                 </a>
-              </p>
-              <p className="text-white flex">
-                <span className="font-semibold">Address: </span>
-                <div className="ml-2">
+              </div>
+
+              <div className="text-white flex gap-2">
+                <span className="font-semibold mt-1">
+                  <FaLocationDot size={20} /> {/* Adjust icon size */}
+                </span>
+                <div className=" ml-3">
                   No.3/20, A K Thanda Village, Velanur, Harur.
                   <br /> Dharmapuri, Tamil Nadu - 636906.
                 </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>
