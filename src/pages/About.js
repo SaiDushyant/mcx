@@ -102,7 +102,7 @@ const About = () => {
         >
           <div className="md:mx-96 desktop-lg:mx-[24rem]">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold md:font-semibold">
-              COME JOIN WITH <span style={{ color: "#FFA500" }}>US!</span>
+              Come Join With <span style={{ color: "#FFA500" }}>US!</span>
             </h1>
             <p className="text-base md:text-2xl mt-5 md:mt-10 font-medium">
               Be a part of a transformative journey that empowers farmers and
