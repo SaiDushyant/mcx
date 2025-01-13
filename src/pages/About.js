@@ -100,7 +100,7 @@ const About = () => {
           //   backgroundPosition: "center",
           // }}
         >
-          <div className="md:mx-96 xl:mx-[24rem]">
+          <div className="md:mx-96 desktop-lg:mx-[24rem]">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold md:font-semibold">
               COME JOIN WITH <span style={{ color: "#FFA500" }}>US!</span>
             </h1>

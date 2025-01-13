@@ -20,11 +20,11 @@ function NavBar() {
         </NavLink>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-10 mr-24">
+        <div className="hidden md:flex space-x-10">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `hover:text-green text-3xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -34,7 +34,7 @@ function NavBar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `hover:text-green text-3xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -44,7 +44,7 @@ function NavBar() {
           <NavLink
             to="/services"
             className={({ isActive }) =>
-              `hover:text-green text-3xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }
@@ -54,7 +54,7 @@ function NavBar() {
           <NavLink
             to="/gallery"
             className={({ isActive }) =>
-              `hover:text-green text-3xl ${
+              `hover:text-green text-2xl ${
                 isActive ? "text-green font-semibold" : ""
               }`
             }

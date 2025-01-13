@@ -51,11 +51,11 @@ const Home = () => {
         </div>
 
         <div className="md:ml-20 px-4 relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-5xl font-bold mb-6">Growing Future Together</h1>
+          <div className="max-w-3xl text-white">
+            <h1 className="text-6xl font-bold mb-6">Growing Future Together</h1>
             <p className="text-xl mb-8">
               Empowering farmers with tools, finance, and healthcare to
-              cultivate a brighter future.
+              cultivate <br />a brighter future.
             </p>
             <NavLink
               to="/about"

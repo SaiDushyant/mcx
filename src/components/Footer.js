@@ -5,6 +5,7 @@ import {
   FaTelegram,
   FaTwitter,
 } from "react-icons/fa6";
+import { FiExternalLink } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -122,18 +123,29 @@ const Footer = () => {
             <div className="space-y-1 md:space-y-3 mt-1 md:mt-3 text-base md:text-xl pl-1">
               <p className="text-white">
                 <span className="font-semibold">Phone: </span>
-                <a href="tel:+919080103716">+91 9080103716</a>
-              </p>
-              <p className="text-white">
-                <span className="font-semibold">Email: </span>
-                <a href="mailto:mcxfoundation@gmail.com">
-                  mcxfoundation@gmail.com
+                <a
+                  href="tel:+919080103716"
+                  className="underline underline-offset-2 inline-flex items-center"
+                >
+                  +91 9080103716
+                  <FiExternalLink className="w-6" />
                 </a>
               </p>
               <p className="text-white">
+                <span className="font-semibold">Email: </span>
+                <a
+                  href="mailto:mcxfoundation@gmail.com"
+                  className="underline underline-offset-2 inline-flex items-center"
+                >
+                  mcxfoundation@gmail.com <FiExternalLink className="w-6" />
+                </a>
+              </p>
+              <p className="text-white flex">
                 <span className="font-semibold">Address: </span>
-                No.3/20, A K Thanda Village, Velanur, Harur. Dharmapuri, Tamil
-                Nadu - 636906.
+                <div className="ml-2">
+                  No.3/20, A K Thanda Village, Velanur, Harur.
+                  <br /> Dharmapuri, Tamil Nadu - 636906.
+                </div>
               </p>
             </div>
           </div>
