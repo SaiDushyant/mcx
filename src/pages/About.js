@@ -82,7 +82,7 @@ const About = () => {
               {/* Image */}
               <img
                 src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841310/farmer_hdqkq4.webp"
-                alt="Our Mission"
+                alt="Farmer"
                 className="rounded-lg w-[22rem] h-auto max-h-96 ml-12"
               />
             </div>{" "}
@@ -102,7 +102,7 @@ const About = () => {
           className="w-full h-[60vh] text-center flex justify-center items-center absolute z-0"
           style={{
             backgroundImage:
-              'url("https://res.cloudinary.com/dk7uaskcl/image/upload/v1736877261/pexels-dibakar-roy-2432543-20396320_1_i7c9zg.jpg")',
+              'url("https://res.cloudinary.com/dk7uaskcl/image/upload/v1736878836/pexels-mick-di-perretta-740727988-18536349_11zon_brtcn3.webp")',
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
