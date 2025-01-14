@@ -144,14 +144,15 @@ const Footer = () => {
                   <FiExternalLink className="w-5 inline-block ml-1" />
                 </a>
               </p>
-              <p className="text-white flex items-center gap-2">
-                <FaLocationDot style={{ color: "#FFA500" }} />
-                <span>
-                  No.3/20, A K Thanda Village, Velanur, Harur.
-                  <br />
-                  Dharmapuri, Tamil Nadu - 636906.
-                </span>
-              </p>
+              <div className="text-white flex items-center gap-2">
+                <p>
+                  <FaLocationDot style={{ color: "#FFA500" }} />
+                </p>
+                <p>
+                  No.3/20, A K Thanda Village, Velanur, Harur. Dharmapuri, Tamil
+                  Nadu - 636906.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -115,10 +115,11 @@ const About = () => {
             </h1>
             <p className="text-base md:text-2xl mt-5 md:mt-10 font-medium">
               Be a part of a transformative journey that empowers farmers and
-              connects investors to meaningful opportunities. At MCX Foundation,
-              we create sustainable solutions that drive growth, foster
-              innovation, and benefit communities worldwide. Together, let’s
-              build a brighter future.
+              connects investors to meaningful opportunities. At{" "}
+              <span style={{ color: "#FFA500" }}>MCX Foundation</span>, we
+              create sustainable solutions that drive growth, foster innovation,
+              and benefit communities worldwide. Together, let’s build a
+              brighter future.
             </p>
           </div>
         </div>
