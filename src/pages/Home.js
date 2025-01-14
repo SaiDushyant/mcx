@@ -105,7 +105,7 @@ const Home = () => {
           className="rounded-[2rem] md:rounded-[3rem] p-6 w-auto max-w-[22rem] md:max-w-6xl shadow-xl"
           style={{ backgroundColor: "#FAF3E0" }}
         >
-          <h1 className="text-4xl md:text-7xl font-semibold text-center md:my-6">
+          <h1 className="text-4xl md:text-7xl font-medium font-serif text-center md:my-6">
             Who <span style={{ color: "#FFA500" }}>WE</span> are{" "}
             <span style={{ color: "#FFA500" }}>?</span>
           </h1>
@@ -117,13 +117,21 @@ const Home = () => {
               className="w-full max-w-xs md:max-w-md h-auto mx-10"
             />
             {/* Text */}
-            <div className="text-gray-700 text-lg text-center md:text-left tracking-wide md:text-3xl font-medium leading-relaxed">
+            <div className="text-gray-700 text-lg text-center md:text-left md:text-4xl">
               <p>
-                We <span style={{ color: "#FFA500" }}>MCX FOUNDATION</span>, are
-                dedicated to empowering farmers by connecting international
-                funding with local needs. Our mission is to provide financial
-                aid, essential farming materials, and healthcare support to
-                farming communities, fostering sustainable growth.
+                {" "}
+                We{" "}
+                <span
+                  className="font-bold"
+                  style={{ color: "#FFA500", fontFamily: "cursive" }}
+                >
+                  MCX FOUNDATION
+                </span>
+                , are dedicated to empowering farmers by connecting
+                international funding with local needs. Our mission is to
+                provide financial aid, essential farming materials, and
+                healthcare support to farming communities, fostering sustainable
+                growth.
               </p>
             </div>
           </div>
@@ -137,7 +145,7 @@ const Home = () => {
         style={{ backgroundColor: "#F7F9F2" }}
       >
         <div className="text-center w-fit h-fit p-2">
-          <h1 className="text-4xl md:text-7xl font-semibold pt-14 pb-6">
+          <h1 className="text-4xl md:text-7xl font-medium pt-14 pb-6 font-serif">
             What <span style={{ color: "#FFA500" }}>WE</span> Offer{" "}
             <span style={{ color: "#FFA500" }}>!!</span>
           </h1>
@@ -215,7 +223,7 @@ const Home = () => {
         className="w-full min-h-screen flex flex-col items-center"
       >
         <div className="text-center mt-16">
-          <h1 className="text-5xl md:text-7xl font-semibold">
+          <h1 className="text-5xl md:text-7xl font-medium font-serif">
             Contact <span style={{ color: "#FFA500" }}>US</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl" style={{ color: "#717171" }}>

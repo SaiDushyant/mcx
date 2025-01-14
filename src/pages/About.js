@@ -21,7 +21,7 @@ const About = () => {
           }}
         >
           <div className="mt-56 md:mt-32 2xl:mt-36 xl:mx-[19rem]">
-            <h1 className="text-5xl md:text-[5.5rem] font-semibold">
+            <h1 className="text-5xl md:text-[5.5rem] font-semibold font-serif">
               About <span style={{ color: "#FFA500" }}>Us</span>
             </h1>
             <p className="text-base md:text-xl mt-3 font-medium">
@@ -44,47 +44,53 @@ const About = () => {
         style={{ backgroundColor: "#FAF3E0" }}
       >
         <div className="text-center">
-          <h1 className="text-8xl font-semibold pt-12 py-10">
+          <h1 className="text-[5rem] font-semibold pt-12 py-10 font-serif">
             The Story Behind Our Mission
           </h1>
           <div className="w-full mx-auto bg-gray-300 h-[5px]"></div>
         </div>
 
         <div className=" mt-10 mx-12">
-          <p className="text-3xl font-semibold text-center">
+          <p
+            className="text-3xl text-center"
+            style={{ fontFamily: "cursive", fontWeight: "700" }}
+          >
             "Empowering Farmers, Transforming Lives: A Journey of Dedication to
             Growth, Collaboration, and Sustainable Agriculture"
           </p>
           {/* Text */}
-          <div className="flex text-justify text-3xl  mr-5 py-10">
-            <div>
-              <p>
-                It all began with a vision: to empower the backbone of our
-                society—farmers—and create a platform for impactful investments.
-                With a commitment to fostering global collaboration, MCX
-                Foundation laid the foundation for bridging the gap between
-                foreign investors and local farming communities.
-              </p>
-              <p className="mt-4">
-                Over the years, the company has grown into a trusted partner for
-                countless farmers, offering financial support, resources, and
-                medical assistance. Our journey is a testament to the power of
-                collective effort and innovation, transforming challenges into
-                opportunities.
-              </p>
-              <p className="mt-4">
-                As we look to the future, MCX Foundation remains steadfast in
-                its mission to nurture agriculture and build a sustainable
-                tomorrow for all.
-              </p>
-            </div>
+          <div className="flex flex-col text-justify py-10 text-3xl mx-5">
+            <div className="flex text-justify text-3xl gap-10">
+              <div>
+                <p>
+                  It all began with a vision: to empower the backbone of our
+                  society—farmers—and create a platform for impactful
+                  investments. With a commitment to fostering global
+                  collaboration, MCX Foundation laid the foundation for bridging
+                  the gap between foreign investors and local farming
+                  communities.
+                </p>
+                <p className="mt-4">
+                  Over the years, the company has grown into a trusted partner
+                  for countless farmers, offering financial support, resources,
+                  and medical assistance. Our journey is a testament to the
+                  power of collective effort and innovation, transforming
+                  challenges into opportunities.
+                </p>
+              </div>
 
-            {/* Image */}
-            <img
-              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841310/farmer_hdqkq4.webp"
-              alt="Our Mission"
-              className="rounded-lg w-[22rem] h-auto max-h-96 ml-12"
-            />
+              {/* Image */}
+              <img
+                src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841310/farmer_hdqkq4.webp"
+                alt="Our Mission"
+                className="rounded-lg w-[22rem] h-auto max-h-96 ml-12"
+              />
+            </div>{" "}
+            <p className="mt-4">
+              As we look to the future, MCX Foundation remains steadfast in its
+              mission to nurture agriculture and build a sustainable tomorrow
+              for all.
+            </p>
           </div>
         </div>
       </section>
@@ -101,7 +107,7 @@ const About = () => {
           // }}
         >
           <div className="md:mx-96 desktop-lg:mx-[24rem]">
-            <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold md:font-semibold">
+            <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold font-serif">
               Come Join With <span style={{ color: "#FFA500" }}>US!</span>
             </h1>
             <p className="text-base md:text-2xl mt-5 md:mt-10 font-medium">
@@ -117,9 +123,9 @@ const About = () => {
 
       {/* Meet our Founders */}
 
-      <section className="py-10">
+      <section className="pb-10">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-semibold md:text-6xl text-gray-800">
+          <h2 className="text-3xl font-semibold md:text-6xl text-gray-800 font-serif">
             Meet <span style={{ color: "#FFA500" }}>Our</span> Founders
           </h2>
         </div>

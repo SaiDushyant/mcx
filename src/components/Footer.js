@@ -41,7 +41,7 @@ const Footer = () => {
             {/* Menu Section */}
             <div className="w-full sm:w-1/2">
               <h1
-                className="text-xl md:text-4xl font-semibold "
+                className="text-xl md:text-4xl font-semibold font-serif"
                 style={{ color: "#FFA500" }}
               >
                 Menu
@@ -93,13 +93,13 @@ const Footer = () => {
             {/* Follow Us Section */}
             <div className="w-full sm:w-1/2">
               <h2
-                className="text-xl md:text-4xl font-semibold"
+                className="text-xl md:text-4xl font-semibold font-serif"
                 style={{ color: "#FFA500" }}
               >
                 Follow Us
               </h2>
-              <div className="space-y-1 md:space-y-3 mt-1 md:mt-3 font-semibold text-lg">
-                <p className="text-white   flex items-center gap-2">
+              <div className="space-y-1 md:space-y-3 mt-1 ml-1 md:mt-3 font-semibold text-lg">
+                <p className="text-white flex items-center gap-2">
                   <FaFacebook style={{ color: "#FFA500" }} /> Facebook
                 </p>
                 <p className="text-white flex items-center gap-2">
@@ -116,48 +116,42 @@ const Footer = () => {
           </div>
 
           {/* Contact Info Section */}
-          <div className="w-full">
+          <div className="w-full sm:w-1/2">
             <h2
-              className="text-xl md:text-4xl font-semibold"
+              className="text-xl md:text-4xl font-semibold font-serif"
               style={{ color: "#FFA500" }}
             >
               Contact Info
             </h2>
-            <div className="space-y-3 mt-3 text-base md:text-xl pl-1">
-              <div className="text-white flex items-center gap-2">
-                <span className="font-semibold">
-                  <FaPhone size={20} /> {/* Adjust icon size */}
-                </span>
+            <div className="space-y-1 md:space-y-3 mt-1 ml-1 md:mt-3 font-semibold text-lg">
+              <p className="text-white flex items-center gap-2">
+                <FaPhone style={{ color: "#FFA500" }} />
                 <a
                   href="tel:+919080103716"
-                  className="underline underline-offset-2 inline-flex items-center text-white ml-2"
+                  className="underline underline-offset-2 text-white"
                 >
                   +91 9080103716
-                  <FiExternalLink className="w-6" />
+                  <FiExternalLink className="w-5 inline-block ml-1" />
                 </a>
-              </div>
-
-              <div className="text-white flex items-center gap-2">
-                <span className="font-semibold">
-                  <IoIosMail size={24} /> {/* Adjust icon size */}
-                </span>
+              </p>
+              <p className="text-white flex items-center gap-2">
+                <IoIosMail style={{ color: "#FFA500" }} />
                 <a
                   href="mailto:mcxfoundation@gmail.com"
-                  className="underline underline-offset-2 inline-flex items-center text-white ml-2"
+                  className="underline underline-offset-2 text-white"
                 >
-                  mcxfoundation@gmail.com <FiExternalLink className="w-6" />
+                  mcxfoundation@gmail.com
+                  <FiExternalLink className="w-5 inline-block ml-1" />
                 </a>
-              </div>
-
-              <div className="text-white flex gap-2">
-                <span className="font-semibold mt-1">
-                  <FaLocationDot size={20} /> {/* Adjust icon size */}
-                </span>
-                <div className=" ml-3">
+              </p>
+              <p className="text-white flex items-center gap-2">
+                <FaLocationDot style={{ color: "#FFA500" }} />
+                <span>
                   No.3/20, A K Thanda Village, Velanur, Harur.
-                  <br /> Dharmapuri, Tamil Nadu - 636906.
-                </div>
-              </div>
+                  <br />
+                  Dharmapuri, Tamil Nadu - 636906.
+                </span>
+              </p>
             </div>
           </div>
         </div>
