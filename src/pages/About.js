@@ -108,7 +108,7 @@ const About = () => {
           }}
         >
           {" "}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="md:mx-96 desktop-lg:mx-[24rem] text-white relative z-10">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold font-serif">
               Come Join With <span style={{ color: "#FFA500" }}>US!</span>
