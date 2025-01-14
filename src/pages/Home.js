@@ -1,7 +1,7 @@
 // src/Home.js
 
 import { ArrowRight } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import {
   FaDiscord,
@@ -28,6 +28,8 @@ const Home = () => {
 
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
   const [successMessage, setSuccessMessage] = useState(null); // State for success message
+  const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(0); // Progress for the slider
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -40,29 +42,64 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true); // Start loading
     const { name, place, email, phone, status, message } = formValues;
 
-    // Save data to Supabase
-    const { error } = await supabase
-      .from("feedback")
-      .insert([{ name, place, email, phone, status, message }]);
+    try {
+      // Save data to Supabase
+      const { error } = await supabase
+        .from("feedback")
+        .insert([{ name, place, email, phone, status, message }]);
 
-    if (error) {
-      setErrorMessage(`Error submitting feedback: ${error.message}`);
+      if (error) {
+        setErrorMessage(`Error submitting feedback: ${error.message}`);
+        setSuccessMessage(null);
+      } else {
+        setSuccessMessage("Feedback submitted successfully!");
+        setErrorMessage(null);
+        setFormValues({
+          name: "",
+          place: "",
+          email: "",
+          phone: "",
+          status: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      setErrorMessage(`Unexpected error: ${error.message}`);
       setSuccessMessage(null);
-    } else {
-      setSuccessMessage("Feedback submitted successfully!");
-      setErrorMessage(null);
-      setFormValues({
-        name: "",
-        place: "",
-        email: "",
-        phone: "",
-        status: "",
-        message: "",
-      });
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
+
+  useEffect(() => {
+    if (errorMessage || successMessage) {
+      const duration = 5000; // 5 seconds
+      let progressInterval = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= 100) {
+            clearInterval(progressInterval);
+            return 100;
+          }
+          return prev + 100 / (duration / 100); // Increment progress
+        });
+      }, 100);
+
+      // Automatically clear the messages after the duration
+      const timer = setTimeout(() => {
+        setErrorMessage(null);
+        setSuccessMessage(null);
+        setProgress(0); // Reset progress
+      }, duration);
+
+      return () => {
+        clearTimeout(timer); // Cleanup timer
+        clearInterval(progressInterval); // Cleanup interval
+      };
+    }
+  }, [errorMessage, successMessage]);
   return (
     <>
       <NavBar />
@@ -221,50 +258,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Error/Success Alert */}
-      {errorMessage && (
-        <div
-          className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
-          role="alert"
-        >
-          <strong className="font-bold">Error!</strong>
-          <span className="block sm:inline">{errorMessage}</span>
-          <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
-            <svg
-              className="fill-current h-6 w-6 text-red-500"
-              role="button"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              onClick={() => setErrorMessage(null)}
-            >
-              <title>Close</title>
-              <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-            </svg>
-          </span>
-        </div>
-      )}
-      {successMessage && (
-        <div
-          className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
-          role="alert"
-        >
-          <strong className="font-bold">Success!</strong>
-          <span className="block sm:inline">{successMessage}</span>
-          <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
-            <svg
-              className="fill-current h-6 w-6 text-green-500"
-              role="button"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              onClick={() => setSuccessMessage(null)}
-            >
-              <title>Close</title>
-              <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-            </svg>
-          </span>
-        </div>
-      )}
-
       {/* Contact Form */}
 
       <section
@@ -279,7 +272,68 @@ const Home = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-4/5 max-w-[1200px] flex mb-10 overflow-hidden">
+
+        <div className="border-2 rounded-xl md:rounded-3xl mt-10 md:mt-16 w-10/12 xl:w-4/5 max-w-[1200px] flex mb-10 overflow-hidden relative">
+          {/* Error/Success Alert */}
+          {(errorMessage || successMessage) && (
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-4/5 max-w-[500px] shadow-lg">
+              {errorMessage && (
+                <div
+                  className="bg-red-100 border border-red-500 text-red-700 px-4 py-3 rounded relative"
+                  role="alert"
+                >
+                  <strong className="font-bold">Error ! </strong>
+                  <span className="block sm:inline">{errorMessage}</span>
+                  <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
+                    <svg
+                      className="fill-current h-6 w-6 text-red-600"
+                      role="button"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      onClick={() => setErrorMessage(null)}
+                    >
+                      <title>Close</title>
+                      <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                    </svg>
+                  </span>
+                </div>
+              )}
+              {successMessage && (
+                <div
+                  className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+                  role="alert"
+                >
+                  <strong className="font-bold">Success ! </strong>
+                  <span className="block sm:inline">{successMessage}</span>
+                  <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
+                    <svg
+                      className="fill-current h-6 w-6 text-green-600"
+                      role="button"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      onClick={() => setSuccessMessage(null)}
+                    >
+                      <title>Close</title>
+                      <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                    </svg>
+                  </span>
+                </div>
+              )}
+              {(errorMessage || successMessage) && (
+                <div
+                  className="progress-bar absolute bottom-0 left-0 w-full h-1 rounded-b"
+                  style={{
+                    backgroundColor: errorMessage
+                      ? "#dc2626" // Amber border for error
+                      : "#16a34a", // Green border for success
+                    width: `${progress}%`,
+                    transition: "width 0.1s ease-out",
+                  }}
+                />
+              )}
+            </div>
+          )}
+
           {/* LEFT side  */}
 
           <div
@@ -350,6 +404,7 @@ const Home = () => {
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
                   value={formValues.name}
+                  required
                 />
                 <label
                   htmlFor="name"
@@ -372,6 +427,7 @@ const Home = () => {
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
                   value={formValues.place}
+                  required
                 />
                 <label
                   htmlFor="place"
@@ -394,6 +450,7 @@ const Home = () => {
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
                   value={formValues.email}
+                  required
                 />
                 <label
                   htmlFor="email"
@@ -416,6 +473,7 @@ const Home = () => {
                   className="peer w-full px-2 pt-3 py-1 border-b-2 border-gray-300 focus:outline-none focus:border-orange-500 text-gray-600"
                   onChange={handleInputChange}
                   value={formValues.phone}
+                  required // Makes the input field required
                 />
                 <label
                   htmlFor="phone"
@@ -481,8 +539,37 @@ const Home = () => {
                 <button
                   type="submit"
                   className="w-fit px-6 py-3 text-center rounded-lg text-white float-right font-semibold bg-green-600 hover:bg-green-700 inline-flex items-center"
+                  disabled={loading}
                 >
-                  Send Message <ArrowRight className="ml-2 h-5 w-5" />
+                  {loading ? (
+                    <>
+                      <svg
+                        className="animate-spin mr-2 h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 2.042.77 3.899 2.043 5.291l2.957-2.957z"
+                        ></path>
+                      </svg>
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Send Message <ArrowRight className="ml-2 h-5 w-5" />
+                    </>
+                  )}
                 </button>
               </div>
             </div>
