@@ -97,16 +97,19 @@ const About = () => {
 
       {/* Come join us */}
 
-      <section className="w-full h-[80vh] flex justify-center items-center">
+      <section className="w-full h-[80vh] flex justify-center items-center relative">
         <div
-          className="w-full h-[60vh] bg-green-200 text-center flex justify-center items-center"
-          // style={{
-          //   backgroundImage: `url(${Come_join_us})`,
-          //   backgroundSize: "cover",
-          //   backgroundPosition: "center",
-          // }}
+          className="w-full h-[60vh] text-center flex justify-center items-center absolute z-0"
+          style={{
+            backgroundImage:
+              'url("https://res.cloudinary.com/dk7uaskcl/image/upload/v1736877261/pexels-dibakar-roy-2432543-20396320_1_i7c9zg.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          <div className="md:mx-96 desktop-lg:mx-[24rem]">
+          {" "}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="md:mx-96 desktop-lg:mx-[24rem] text-white relative z-10">
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold font-serif">
               Come Join With <span style={{ color: "#FFA500" }}>US!</span>
             </h1>
