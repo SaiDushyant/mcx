@@ -66,7 +66,7 @@ function Admin() {
                 <strong>Phone:</strong> {feedback.phone}
               </p>
               <p className="text-gray-600 mb-1">
-                <strong>Service:</strong> {feedback.service}
+                <strong>Service:</strong> {feedback.status}
               </p>
               <p className="text-gray-600">
                 <strong>Message:</strong> {feedback.message}
