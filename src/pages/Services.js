@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import ServiceItem from "../components/ServiceItem";
-import serviceData from "../data/serviceData";
+import { serviceData } from "../data/Data";
 
 const Services = () => {
   return (

@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-import { BusinessMan, Coin, Health, Sack } from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { supabase } from "../supabaseClient";
@@ -113,7 +112,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 mt-5 mb-5 md:mb-20">
             {/* Image */}
             <img
-              src={BusinessMan}
+              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841244/businessman_uj6bsi.webp"
               alt="BusinessMan"
               className="w-full max-w-xs md:max-w-md h-auto mx-10"
             />
@@ -154,14 +153,17 @@ const Home = () => {
             className="w-80 h-72 hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
-            <img src={Coin} alt="Coin" className="w-28 mb-4" />
+            <img
+              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736839480/f9798a31-716d-4b08-b24f-afb77ffaa2c0.png"
+              alt="Coin"
+              className="w-28 mb-4"
+            />
             <h1 className="text-2xl font-bold text-center mb-2">
               Financial Support
             </h1>
             <p className="text-center text-sm md:text-base text-gray-700">
               Affordable loans designed to empower farmers with the capital they
-              need for growth, enabling them to access resources and scale their
-              operations.
+              need for growth, enabling them to scale their operations.
             </p>
           </div>
 
@@ -170,7 +172,11 @@ const Home = () => {
             className="w-80 h-72  hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
-            <img src={Sack} alt="Coin" className="w-28 mb-4" />
+            <img
+              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736839400/e35d3c08-fff2-44c3-8d83-069c030632ad.png"
+              alt="Coin"
+              className="w-28 my-4"
+            />
             <h1 className="text-2xl font-bold text-center mb-2">
               Resource Assistance
             </h1>
@@ -186,7 +192,11 @@ const Home = () => {
             className="w-80 h-72  hover:scale-105 duration-300 md:h-80 p-6 flex flex-col items-center justify-start rounded-[5rem] drop-shadow-[0_0_5px_rgba(0,0,0,0.35)] animate"
             style={{ backgroundColor: "#C8E6C9" }}
           >
-            <img src={Health} alt="Coin" className="w-28 " />
+            <img
+              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736839447/988b3bb0-1023-4c93-b458-2ef0083b615c.png"
+              alt="Coin"
+              className="w-28 "
+            />
             <h1 className="text-2xl font-bold text-center mb-2">
               Healthcare for Farmers
             </h1>
@@ -200,7 +210,10 @@ const Home = () => {
 
       {/* Contact Form */}
 
-      <section id="contact" className="w-full min-h-screen flex flex-col items-center">
+      <section
+        id="contact"
+        className="w-full min-h-screen flex flex-col items-center"
+      >
         <div className="text-center mt-16">
           <h1 className="text-5xl md:text-7xl font-semibold">
             Contact <span style={{ color: "#FFA500" }}>US</span>

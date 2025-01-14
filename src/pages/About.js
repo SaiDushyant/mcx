@@ -1,6 +1,5 @@
 // src/About.js
 import React from "react";
-import { AboutBackgroundImage, Farmer } from "../assets/images/images";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -15,12 +14,13 @@ const About = () => {
         <div
           className="absolute inset-0 z-0 text-center"
           style={{
-            backgroundImage: `url(${AboutBackgroundImage})`,
+            backgroundImage:
+              'url("https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841306/about_bg_fwqfrt.webp")',
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="mt-56 md:mt-32 2xl:mt-36 xl:mx-[26rem]">
+          <div className="mt-56 md:mt-32 2xl:mt-36 xl:mx-[19rem]">
             <h1 className="text-5xl md:text-[5.5rem] font-semibold">
               About <span style={{ color: "#FFA500" }}>Us</span>
             </h1>
@@ -81,9 +81,9 @@ const About = () => {
 
             {/* Image */}
             <img
-              src={Farmer} // Dummy image
+              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841310/farmer_hdqkq4.webp"
               alt="Our Mission"
-              className="rounded-lg w-[22rem] max-w-sm ml-12"
+              className="rounded-lg w-[22rem] h-auto max-h-96 ml-12"
             />
           </div>
         </div>

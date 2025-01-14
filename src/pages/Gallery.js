@@ -4,16 +4,9 @@ import Footer from "../components/Footer";
 import HorizontalCarousel from "../components/HorizontalCarousel";
 import HorizontalScroll from "../components/HorizontalScroll";
 import NavBar from "../components/NavBar";
+import { slideImages } from "../data/Data";
 
 const Gallery = () => {
-  const images = [
-    "https://via.placeholder.com/300x200",
-    "https://via.placeholder.com/300x200",
-    "https://via.placeholder.com/300x200",
-    "https://via.placeholder.com/300x200",
-    "https://via.placeholder.com/300x200",
-  ];
-
   return (
     <>
       <NavBar />
@@ -29,7 +22,7 @@ const Gallery = () => {
           </div>
           {/* Horizontal Scroll */}
           <div className="mb-8">
-            <HorizontalScroll images={images} />
+            <HorizontalScroll images={slideImages} />
           </div>
         </div>
       </section>

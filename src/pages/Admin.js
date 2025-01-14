@@ -38,8 +38,8 @@ function Admin() {
   };
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">
+    <div className="p-6 bg-gradient-to-r from-blue-50 via-white to-indigo-50 min-h-screen">
+      <h1 className="text-3xl font-bold mb-6 text-indigo-800 text-center">
         Admin Feedback Panel
       </h1>
       {loading ? (
@@ -47,60 +47,32 @@ function Admin() {
       ) : feedbacks.length === 0 ? (
         <p className="text-gray-600 text-center">No feedbacks available.</p>
       ) : (
-        <div className="overflow-x-auto">
-          <table className="min-w-full border-collapse border border-gray-300 shadow-md rounded-lg">
-            <thead>
-              <tr className="bg-gray-100 text-gray-700">
-                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
-                  Name
-                </th>
-                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
-                  Place
-                </th>
-                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
-                  Email
-                </th>
-                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
-                  Phone
-                </th>
-                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
-                  Service
-                </th>
-                <th className="border border-gray-300 px-6 py-3 font-medium text-left">
-                  Message
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {feedbacks.map((feedback, index) => (
-                <tr
-                  key={index}
-                  className={`text-gray-800 ${
-                    index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                  }`}
-                >
-                  <td className="border border-gray-300 px-6 py-4">
-                    {feedback.name}
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">
-                    {feedback.place}
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">
-                    {feedback.email}
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">
-                    {feedback.phone}
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">
-                    {feedback.service}
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">
-                    {feedback.message}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {feedbacks.map((feedback, index) => (
+            <div
+              key={index}
+              className="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105"
+            >
+              <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+                {feedback.name}
+              </h2>
+              <p className="text-gray-600 mb-1">
+                <strong>Place:</strong> {feedback.place}
+              </p>
+              <p className="text-gray-600 mb-1">
+                <strong>Email:</strong> {feedback.email}
+              </p>
+              <p className="text-gray-600 mb-1">
+                <strong>Phone:</strong> {feedback.phone}
+              </p>
+              <p className="text-gray-600 mb-1">
+                <strong>Service:</strong> {feedback.service}
+              </p>
+              <p className="text-gray-600">
+                <strong>Message:</strong> {feedback.message}
+              </p>
+            </div>
+          ))}
         </div>
       )}
     </div>

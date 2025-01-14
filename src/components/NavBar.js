@@ -2,7 +2,6 @@ import { ArrowRight } from "lucide-react";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { Logo1 } from "../assets/images/images";
 
 function NavBar() {
   // State to control the visibility of the mobile menu
@@ -17,7 +16,11 @@ function NavBar() {
     <nav className="w-full fixed z-50">
       <div className="flex items-center justify-between h-fit px-5 py-2 md:px-3 md:py-2 mx-2 md:mx-10 mt-5 rounded-xl text-green-800 bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
         <NavLink to="/" className="flex items-center">
-          <img src={Logo1} alt="logo" className="w-52 mt-2" />
+          <img
+            src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841505/logo1_kk7oj3.webp"
+            alt="logo"
+            className="w-52 mt-2"
+          />
         </NavLink>
 
         {/* Desktop menu */}
