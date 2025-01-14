@@ -1,19 +1,29 @@
 import { ArrowRight } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 function NavBar() {
-  // State to control the visibility of the mobile menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to toggle the menu
+  // Handle body scroll
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   return (
-    <nav className="w-full fixed z-50">
+    <nav className="w-full fixed z-40">
       <div className="flex items-center justify-between h-fit px-5 py-2 md:px-3 md:py-2 mx-2 md:mx-10 mt-5 rounded-xl text-green-800 bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
         <NavLink to="/" className="flex items-center">
           <img
@@ -69,10 +79,9 @@ function NavBar() {
 
         {/* Mobile menu */}
         <div className="md:hidden flex items-center">
-          {/* Hamburger icon */}
           <button onClick={toggleMenu} className="text-green-700">
             {isMenuOpen ? (
-              <span className="text-4xl">×</span> // Cross icon
+              <span className="text-4xl">×</span> // Close icon
             ) : (
               <span className="text-3xl">☰</span> // Hamburger icon
             )}
@@ -91,50 +100,77 @@ function NavBar() {
       </div>
 
       {/* Mobile dropdown menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-green-700 text-white flex flex-col items-center space-y-4 py-4">
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-white text-green-600 z-50 flex flex-col space-y-6 p-6 transition-transform duration-500 ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <div className="w-full flex justify-between items-center">
+          <NavLink to="/" className="flex items-center">
+            <img
+              src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1736841505/logo1_kk7oj3.webp"
+              alt="logo"
+              className="w-60 mt-2"
+            />
+          </NavLink>
+          <button onClick={toggleMenu} className="text-5xl text-green-700">
+            ×
+          </button>
+        </div>
+        <hr className="h-[2px] bg-gray-500" />
+        <div className="flex flex-col gap-6 ml-5 pt-5">
           <NavLink
             to="/"
+            onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-green-200 ${
-                isActive ? "text-green-200 font-semibold" : ""
-              }`
+              `text-3xl ${isActive ? "text-green-800 font-semibold" : ""}`
             }
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
+            onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-green-200 ${
-                isActive ? "text-green-200 font-semibold" : ""
-              }`
+              `text-3xl ${isActive ? "text-green-800 font-semibold" : ""}`
             }
           >
             About
           </NavLink>
           <NavLink
             to="/services"
+            onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-green-200 ${
-                isActive ? "text-green-200 font-semibold" : ""
-              }`
+              `text-3xl ${isActive ? "text-green-800 font-semibold" : ""}`
             }
           >
             Services
           </NavLink>
           <NavLink
             to="/gallery"
+            onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-green-200 ${
-                isActive ? "text-green-200 font-semibold" : ""
-              }`
+              `text-3xl ${isActive ? "text-green-800 font-semibold" : ""}`
             }
           >
             Gallery
           </NavLink>
         </div>
-      )}
+        <div>
+          <div className="ml-5 mt-1">
+            <HashLink
+              to="/#contact"
+              onClick={toggleMenu} // Close the menu when clicked
+              className="inline-flex items-center bg-green-600 text-white font-medium text-xl px-4 py-3 rounded-lg hover:bg-green-700 transition-colors"
+              smooth
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </HashLink>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

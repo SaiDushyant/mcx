@@ -1,7 +1,7 @@
 // src/Home.js
 
 import { ArrowRight } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import {
   FaDiscord,
@@ -106,7 +106,7 @@ const Home = () => {
 
       {/* Hero Section */}
 
-      <section className="relative h-[500px] 2xl:h-[800px] flex items-center">
+      <section className="relative h-[700px] 2xl:h-[800px] flex items-center">
         <div
           className="absolute inset-0 z-0"
           style={{
