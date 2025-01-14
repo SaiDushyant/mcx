@@ -15,7 +15,7 @@ const ServiceItem = ({ title, description, image, reverse }) => {
 
       {/* Content */}
       <div
-        className={`flex flex-col md:flex-row items-center gap-3 md:gap-16 mx-20 ${
+        className={`flex flex-col md:flex-row items-center gap-3 md:gap-16 md:mx-20 ${
           reverse ? "md:flex-row-reverse" : ""
         }`}
       >

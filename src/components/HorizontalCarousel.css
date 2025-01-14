@@ -31,10 +31,14 @@
   }
 }
 
-.gallery:hover > img,
-.gallery.reverse-animation:hover > img {
-  animation-play-state: paused;
+/* Apply hover effect only on devices with hover capabilities (laptops, desktops) */
+@media (hover: hover) and (min-width: 768px) {
+  .gallery:hover > img,
+  .gallery.reverse-animation:hover > img {
+    animation-play-state: paused;
+  }
 }
+
 .gallery > img {
   border-radius: 20px;
   grid-area: 1/1;

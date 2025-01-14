@@ -12,9 +12,9 @@ const Services = () => {
 
       {/* Our Services */}
 
-      <section className="h-[450px] md:h-[500px] xl:h-[550px] w-full bg-green-700 flex flex-col items-center rounded-b-full">
+      <section className="h-[500px] md:h-[550px] w-full bg-green-700 flex flex-col items-center rounded-b-full">
         <div className="text-center font-bold">
-          <h1 className="text-[3.5rem] md:text-[5.5rem] text-white font-medium mt-16 md:mt-24 font-serif">
+          <h1 className="text-[3.5rem] md:text-[5.5rem] text-white font-medium mt-24 font-serif">
             <span style={{ color: "#FFA500" }}>Our</span> Services
           </h1>
         </div>
