@@ -149,8 +149,16 @@ const Footer = () => {
                   <FaLocationDot style={{ color: "#FFA500" }} />
                 </p>
                 <p>
-                  No.3/20, A K Thanda Village, Velanur, Harur. Dharmapuri, Tamil
-                  Nadu - 636906.
+                  <a
+                    href="https://maps.app.goo.gl/ktkgwScesyhkQwgp8?g_st=com.google.maps.preview.copy"
+                    target="_blank"
+                    className="underline underline-offset-2 text-white"
+                    rel="noreferrer"
+                  >
+                    No.3/20, A K Thanda Village, Velanur, Harur. Dharmapuri,
+                    Tamil Nadu - 636906.
+                    <FiExternalLink className="w-5 inline-block ml-1" />
+                  </a>
                 </p>
               </div>
             </div>
