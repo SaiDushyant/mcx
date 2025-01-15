@@ -167,7 +167,7 @@ const Footer = () => {
 
         <div className="w-9/12 md:w-full mx-auto bg-white h-[1px]"></div>
         <p className="text-center text-gray-300 text-sm mt-2 pb-5 md:pb-0">
-          © 2024 MCX Foundation. All rights reserved.
+          © {new Date().getFullYear()} MCX Foundation. All rights reserved.
         </p>
       </div>
     </>
