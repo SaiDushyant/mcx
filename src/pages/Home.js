@@ -164,8 +164,8 @@ const Home = () => {
                 {" "}
                 We{" "}
                 <span
-                  className="font-bold"
-                  style={{ color: "#FFA500", fontFamily: "cursive" }}
+                  className="font-bold font-mono"
+                  style={{ color: "#FFA500" }}
                 >
                   MCX FOUNDATION
                 </span>
