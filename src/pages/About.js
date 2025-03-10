@@ -129,31 +129,47 @@ const About = () => {
 
       <section className="pb-10">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-semibold md:text-6xl text-gray-800 font-serif">
+          <h2 className="text-4xl font-semibold md:text-6xl text-gray-800 font-serif">
             Meet <span style={{ color: "#FFA500" }}>Our</span> Founders
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-24">
-          {/* Founder 1 */}
-          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center hover:scale-105 duration-300 border border-gray-200">
-            <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
+        <div className="flex flex-col md:flex-row justify-center items-center md:space-x-24">
+          {/* Founder 1 – Nethaji: Mobile order 2, Desktop order 1 */}
+          <div className="w-72 md:w-80 shadow-2xl bg-white rounded-3xl p-5 flex flex-col items-center text-center hover:scale-105 duration-300 border border-gray-300 order-2 md:order-1 mb-6 md:mb-0">
+            <div className="w-60 md:w-[17rem] h-60 md:h-[17rem] rounded-full mb-4 overflow-hidden">
+              <img
+                src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1741626022/nethaji_bemkdv.webp"
+                alt="Nethaji Subash Chandra Bose S"
+                style={{ transform: "translate(16px, 44px) scale(1.7)" }}
+              />
+            </div>
             <h3 className="text-xl font-semibold text-gray-800">
               NETHAJI SUBASH CHANDRA BOSE S
             </h3>
             <p className="text-gray-600">MEMBER TRUSTEE</p>
           </div>
 
-          {/* Founder 2 */}
-          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center md:scale-105 hover:scale-105 md:hover:scale-110 duration-300 border border-gray-200">
-            <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
+          {/* Founder 2 – Siva: Mobile order 1, Desktop order 2 */}
+          <div className="w-72 md:w-80 shadow-2xl bg-white rounded-3xl p-6 flex flex-col items-center text-center hover:scale-105 duration-300 border border-gray-300 order-1 md:order-2 mb-6 md:mb-0">
+            <div className="w-60 md:w-72 h-60 md:h-72 rounded-full mb-4 overflow-hidden">
+              <img
+                src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1741626022/siva_c1is9j.webp"
+                alt="Siva C"
+              />
+            </div>
             <h3 className="text-xl font-semibold text-gray-800">SIVA C</h3>
             <p className="text-gray-600">FOUNDER CUM MEMBER TRUSTEE</p>
           </div>
 
-          {/* Founder 3 */}
-          <div className="w-72 md:w-80 bg-white shadow-xl rounded-3xl p-6 flex flex-col items-center text-center md:scale-105 hover:scale-105 md:hover:scale-110 duration-300 border border-gray-200">
-            <div className="w-60 md:w-72 h-60 md:h-72 rounded-full bg-gray-300 mb-4"></div>
+          {/* Founder 3 – Vijayaprakash: Order remains unchanged */}
+          <div className="w-72 md:w-80 shadow-2xl bg-white rounded-3xl p-6 flex flex-col items-center text-center hover:scale-105 duration-300 border border-gray-300 order-3 mb-6 md:mb-0">
+            <div className="w-60 md:w-72 h-60 md:h-72 rounded-full mb-4 overflow-hidden">
+              <img
+                src="https://res.cloudinary.com/dk7uaskcl/image/upload/v1741626022/vijay_mudryj.webp"
+                alt="Vijayaprakash M"
+              />
+            </div>
             <h3 className="text-xl font-semibold text-gray-800">
               VIJAYAPRAKASH M
             </h3>
